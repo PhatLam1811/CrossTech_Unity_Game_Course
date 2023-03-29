@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : BaseGameObj, IMoving
+public class Player : BaseGameObj
 {
-    private const float PLAYER_SPEED = 3.0f;
-
-    public float speed { get; set; }
-
+    private float speed = 3.0f;
+    
     // Start is called before the first frame update
     void Start()
     {
-        speed = PLAYER_SPEED;
+
     }
 
     // Update is called once per frame
@@ -21,20 +19,15 @@ public class Player : BaseGameObj, IMoving
 
         ProcessInput(out Vector3 movingVector);
 
-        Move(movingVector, elapsedTime);
+        Move(movingVector, elapsedTime, speed);
     }
 
     public void ProcessInput(out Vector3 movingVector)
     {
         // Move
-        float horIn = Input.GetAxis("Horizontal");
-        float verIn = Input.GetAxis("Vertical");
+        float hor = Input.GetAxis("Horizontal");
+        float ver = Input.GetAxis("Vertical");
         
-        movingVector = new Vector3(x: horIn, y: verIn);
-    }
-
-    public void Move(Vector3 movingVector, float elapsedTime)
-    {
-        transform.position += movingVector * speed * elapsedTime;
+        movingVector = new Vector3(x: hor, y: ver);
     }
 }

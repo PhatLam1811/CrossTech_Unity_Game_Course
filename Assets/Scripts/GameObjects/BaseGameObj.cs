@@ -15,4 +15,9 @@ public class BaseGameObj : MonoBehaviour
     {
         
     }
+
+    public virtual void Move(Vector3 movingVector, float elapsedTime, float speed)
+    {
+        transform.position += movingVector * elapsedTime * speed;
+    }
 }
