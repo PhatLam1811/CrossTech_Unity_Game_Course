@@ -19,6 +19,11 @@ public class BaseGameObj : MonoBehaviour
 
     }
 
+    protected float GetElapsedTime()
+    {
+        return Time.deltaTime;
+    }
+
     public virtual void Move(float elapsedTime)
     {
         // Debug.Log(GetType().Name + " Move");

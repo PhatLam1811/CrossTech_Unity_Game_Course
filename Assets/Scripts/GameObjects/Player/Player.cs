@@ -19,7 +19,7 @@ public class Player : BaseGameObj
     // Update is called once per frame
     void Update()
     {
-        float elapsedTime = Time.deltaTime;
+        float elapsedTime = GetElapsedTime();
 
         ProcessInput();
 
