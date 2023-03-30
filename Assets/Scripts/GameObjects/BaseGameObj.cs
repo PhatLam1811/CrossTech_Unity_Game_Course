@@ -24,6 +24,11 @@ public class BaseGameObj : MonoBehaviour
         movingVector = intendedVector;
     }
 
+    public void SetSpeed(float speed)
+    {
+        this.speed = speed;
+    }
+
     public virtual void Move(float elapsedTime)
     {
         // Debug.Log(GetType().Name + " Move");
