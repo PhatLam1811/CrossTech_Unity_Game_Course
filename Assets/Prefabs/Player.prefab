@@ -79,8 +79,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6cf872359d9b864788405655c033bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoType: {fileID: 1921367264671183940, guid: 46b6bc16008153f468ab5a048a519a2c, type: 3}
-  gunBarrel: {fileID: 3203081399878732280}
+  pfAmmoType: {fileID: 1921367264671183940, guid: 46b6bc16008153f468ab5a048a519a2c, type: 3}
+  pfGunBarrel: {fileID: 3203081399878732280}
 --- !u!212 &3203081401211500435
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -143,7 +143,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

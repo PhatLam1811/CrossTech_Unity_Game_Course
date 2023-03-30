@@ -29,10 +29,10 @@ public class BaseAmmo : BaseGameObj, ICollidable
     public override void Move(float elapsedTime)
     {
         // switch to viewport's (main camera) normalized coordinate
-        Vector3 worldCoord = transform.position;
-        Vector3 viewportCoord = viewport.WorldToViewportPoint(worldCoord);
+        Vector3 worldPos = transform.position;
+        Vector3 viewportPos = viewport.WorldToViewportPoint(worldPos);
 
-        if (viewportCoord.y >= 0f && viewportCoord.y <= 1f )
+        if (viewportPos.y >= 0f && viewportPos.y <= 1f )
         {
             // move normally if not out of camera view
             base.Move(elapsedTime);
@@ -48,6 +48,7 @@ public class BaseAmmo : BaseGameObj, ICollidable
     {
         if (collidedObj.TryGetComponent<BaseEnemy>(out BaseEnemy collidedEnemy))
         {
+            // destroy both objs if collided with an enemy
             Destroy(gameObject);
             collidedEnemy.onCollided(gameObject);
         }

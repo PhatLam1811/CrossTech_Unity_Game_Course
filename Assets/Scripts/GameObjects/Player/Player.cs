@@ -6,14 +6,12 @@ public class Player : BaseGameObj, ICollidable
 {
     float cooldown;
 
-    [SerializeField] GameObject ammoType;
-    [SerializeField] GameObject gunBarrel;
+    [SerializeField] GameObject pfAmmoType;
+    [SerializeField] GameObject pfGunBarrel;
 
     // Start is called before the first frame update
     void Start()
     {
-        viewport = Camera.main;
-
         speed = 3.0f;
         cooldown = 1.0f;
     }
@@ -27,6 +25,11 @@ public class Player : BaseGameObj, ICollidable
 
         Move(elapsedTime);
         Shoot(elapsedTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        onCollided(collision.gameObject);
     }
 
     public void ProcessInput()
@@ -49,10 +52,10 @@ public class Player : BaseGameObj, ICollidable
         {
             // Debug.Log(GetTypeName() + " shooting");
 
-            Vector3 barrelPos = gunBarrel.transform.position;
+            Vector3 barrelPos = pfGunBarrel.transform.position;
 
             // shoot a bullet every 1s
-            Instantiate(ammoType, barrelPos, Quaternion.identity);
+            Instantiate(pfAmmoType, barrelPos, Quaternion.identity);
 
             // reset cooldown
             cooldown = 1f;
@@ -61,6 +64,11 @@ public class Player : BaseGameObj, ICollidable
 
     public void onCollided(GameObject collidedObj)
     {
-        Destroy(gameObject);
+        if (collidedObj.TryGetComponent<BaseEnemy>(out BaseEnemy collidedEnemy))
+        {
+            // destroy both objs if collided with an enemy
+            Destroy(gameObject);
+            collidedEnemy.onCollided(gameObject);
+        }
     }
 }

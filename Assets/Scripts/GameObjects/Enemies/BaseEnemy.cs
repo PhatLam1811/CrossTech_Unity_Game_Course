@@ -24,10 +24,10 @@ public class BaseEnemy : BaseGameObj, ICollidable
     public override void Move(float elapsedTime)
     {
         // switch to viewport's (main camera) normalized coordinate
-        Vector3 worldCoord = transform.position;
-        Vector3 viewportCoord = viewport.WorldToViewportPoint(worldCoord);
+        Vector3 worldPos = transform.position;
+        Vector3 viewportPos = viewport.WorldToViewportPoint(worldPos);
 
-        if (viewportCoord.y < 0f)
+        if (viewportPos.y < 0f)
         {
             // disappear if out of camera view from the bottom
             Destroy(gameObject);
