@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HomingAmmo : BaseAmmo
 {
+    BaseEnemy target;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +20,31 @@ public class HomingAmmo : BaseAmmo
     {   
         float elapsedTime = GetElapsedTime();
 
+        Chase();
+
         Move(elapsedTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        onCollided(collision.gameObject);
+        var ammoCollider = GetComponent<BoxCollider2D>();
+        var radarCollider = GetComponentInChildren<CircleCollider2D>();
+
+        if (radarCollider != null) Physics2D.IgnoreCollision(ammoCollider, radarCollider);
+
+        OnCollided(collision.gameObject);
+    }
+
+    public void LockTarget(BaseEnemy target)
+    {
+        this.target = target;
+        speed = 3f;
+    }
+
+    public void Chase()
+    {
+        if (target == null) return;
+
+        movingVector = target.transform.position - transform.position;
     }
 }

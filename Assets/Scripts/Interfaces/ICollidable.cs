@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ICollidable
 {
-    void onCollided(GameObject collidedObj);
+    void OnCollided(GameObject collidedObj);
 }

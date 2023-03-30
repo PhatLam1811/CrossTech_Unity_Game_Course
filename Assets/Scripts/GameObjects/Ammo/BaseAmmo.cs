@@ -21,9 +21,14 @@ public class BaseAmmo : BaseGameObj, ICollidable
         Move(elapsedTime);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        OnCollided(collision.gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        onCollided(collision.gameObject);
+        OnCollided(collision.gameObject);
     }
 
     public override void Move(float elapsedTime)
@@ -44,13 +49,13 @@ public class BaseAmmo : BaseGameObj, ICollidable
         }
     }
 
-    public void onCollided(GameObject collidedObj)
+    public virtual void OnCollided(GameObject collidedObj)
     {
         if (collidedObj.TryGetComponent<BaseEnemy>(out BaseEnemy collidedEnemy))
         {
             // destroy both objs if collided with an enemy
             Destroy(gameObject);
-            collidedEnemy.onCollided(gameObject);
+            collidedEnemy.OnCollided(gameObject);
         }
     }
 }

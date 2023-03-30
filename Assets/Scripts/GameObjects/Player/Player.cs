@@ -32,7 +32,7 @@ public class Player : BaseGameObj, ICollidable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        onCollided(collision.gameObject);
+        OnCollided(collision.gameObject);
     }
 
     public void ProcessInput()
@@ -85,13 +85,13 @@ public class Player : BaseGameObj, ICollidable
         if (currentAmmo >= pfAmmoTypes.Count) currentAmmo = 0;
     }
 
-    public void onCollided(GameObject collidedObj)
+    public void OnCollided(GameObject collidedObj)
     {
         if (collidedObj.TryGetComponent<BaseEnemy>(out BaseEnemy collidedEnemy))
         {
             // destroy both objs if collided with an enemy
             Destroy(gameObject);
-            collidedEnemy.onCollided(gameObject);
+            collidedEnemy.OnCollided(gameObject);
         }
     }
 }

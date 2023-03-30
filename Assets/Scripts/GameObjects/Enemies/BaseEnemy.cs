@@ -39,7 +39,7 @@ public class BaseEnemy : BaseGameObj, ICollidable
         }
     }
 
-    public void onCollided(GameObject collidedObj)
+    public void OnCollided(GameObject collidedObj)
     {
         Destroy(gameObject);
     }
