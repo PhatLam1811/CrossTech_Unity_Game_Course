@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseEnemy : BaseGameObj
+public class BaseEnemy : BaseGameObj, ICollidable
 {
     // Start is called before the first frame update
     void Start()
@@ -37,5 +37,10 @@ public class BaseEnemy : BaseGameObj
             // move normally if not out of camera view
             base.Move(elapsedTime);
         }
+    }
+
+    public void onCollided(GameObject collidedObj)
+    {
+        Destroy(gameObject);
     }
 }

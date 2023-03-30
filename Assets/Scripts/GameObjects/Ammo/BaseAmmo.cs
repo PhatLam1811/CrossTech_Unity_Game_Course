@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseAmmo : BaseGameObj
+public class BaseAmmo : BaseGameObj, ICollidable
 {
     // Start is called before the first frame update
     void Start()
@@ -21,6 +21,11 @@ public class BaseAmmo : BaseGameObj
         Move(elapsedTime);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        onCollided(collision.gameObject);
+    }
+
     public override void Move(float elapsedTime)
     {
         // switch to viewport's (main camera) normalized coordinate
@@ -36,6 +41,15 @@ public class BaseAmmo : BaseGameObj
         {
             // disappear if out of camera view
             Destroy(gameObject);
+        }
+    }
+
+    public void onCollided(GameObject collidedObj)
+    {
+        if (collidedObj.TryGetComponent<BaseEnemy>(out BaseEnemy collidedEnemy))
+        {
+            Destroy(gameObject);
+            collidedEnemy.onCollided(gameObject);
         }
     }
 }

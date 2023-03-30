@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : BaseGameObj
+public class Player : BaseGameObj, ICollidable
 {
     float cooldown;
 
@@ -47,7 +47,7 @@ public class Player : BaseGameObj
 
         if (cooldown <= 0.0f)
         {
-            Debug.Log(GetType().Name + " shooting");
+            // Debug.Log(GetTypeName() + " shooting");
 
             Vector3 barrelPos = gunBarrel.transform.position;
 
@@ -57,5 +57,10 @@ public class Player : BaseGameObj
             // reset cooldown
             cooldown = 1f;
         }
+    }
+
+    public void onCollided(GameObject collidedObj)
+    {
+        Destroy(gameObject);
     }
 }

@@ -9,21 +9,14 @@ public class BaseGameObj : MonoBehaviour
 
     protected Camera viewport;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     protected float GetElapsedTime()
     {
         return Time.deltaTime;
+    }
+
+    public string GetTypeName()
+    {
+        return GetType().Name;
     }
 
     public virtual void Move(float elapsedTime)
