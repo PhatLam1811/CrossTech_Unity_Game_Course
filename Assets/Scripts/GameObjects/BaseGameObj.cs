@@ -19,6 +19,11 @@ public class BaseGameObj : MonoBehaviour
         return GetType().Name;
     }
 
+    public void SetMovingVector(Vector3 intendedVector)
+    {
+        movingVector = intendedVector;
+    }
+
     public virtual void Move(float elapsedTime)
     {
         // Debug.Log(GetType().Name + " Move");

@@ -5,15 +5,18 @@ using UnityEngine;
 public class Player : BaseGameObj, ICollidable
 {
     float cooldown;
+    int currentAmmo;
 
-    [SerializeField] GameObject pfAmmoType;
     [SerializeField] GameObject pfGunBarrel;
+    [SerializeField] List<GameObject> pfAmmoTypes;
 
     // Start is called before the first frame update
     void Start()
     {
         speed = 3.0f;
         cooldown = 1.0f;
+
+        currentAmmo = 0;
     }
 
     // Update is called once per frame
@@ -41,7 +44,19 @@ public class Player : BaseGameObj, ICollidable
         float hor = Input.GetAxis("Horizontal");
         float ver = Input.GetAxis("Vertical");
 
-        movingVector = new Vector3(x: hor, y: ver);
+        SetMovingVector(new Vector3(x: hor, y: ver));
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            // previous type
+            SetAmmoType(-1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            // next type
+            SetAmmoType(1);
+        }
     }
 
     public void Shoot(float elapsedTime)
@@ -55,11 +70,19 @@ public class Player : BaseGameObj, ICollidable
             Vector3 barrelPos = pfGunBarrel.transform.position;
 
             // shoot a bullet every 1s
-            Instantiate(pfAmmoType, barrelPos, Quaternion.identity);
+            Instantiate(pfAmmoTypes[currentAmmo], barrelPos, Quaternion.identity);
 
             // reset cooldown
             cooldown = 1f;
         }
+    }
+
+    public void SetAmmoType(int value)
+    {
+        currentAmmo += value;
+
+        if (currentAmmo < 0) currentAmmo = pfAmmoTypes.Count - 1;
+        if (currentAmmo >= pfAmmoTypes.Count) currentAmmo = 0;
     }
 
     public void onCollided(GameObject collidedObj)

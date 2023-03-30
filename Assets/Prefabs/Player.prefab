@@ -79,8 +79,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6cf872359d9b864788405655c033bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfAmmoType: {fileID: 1921367264671183940, guid: 46b6bc16008153f468ab5a048a519a2c, type: 3}
   pfGunBarrel: {fileID: 3203081399878732280}
+  pfAmmoTypes:
+  - {fileID: 1921367264671183940, guid: 46b6bc16008153f468ab5a048a519a2c, type: 3}
+  - {fileID: 3919985550552368323, guid: 93e2d591116245846a351e3bb5415107, type: 3}
 --- !u!212 &3203081401211500435
 SpriteRenderer:
   m_ObjectHideFlags: 0
