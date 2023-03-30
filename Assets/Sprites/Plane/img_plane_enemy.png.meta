@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,1519 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: img_plane_enemy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 828
+        width: 259
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3514f58d6241894b846585b2faa1e4d
+      internalID: 2020313180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_1
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 782
+        width: 248
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112d1bad07997294985692090d1c3672
+      internalID: 1233224592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_2
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 891
+        width: 192
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1fd60152e761b48a8f05a2882ad21d
+      internalID: -252915098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_3
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 901
+        width: 191
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d4f88822cf5dc488a45f29a6f2787c
+      internalID: -213575973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_4
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 955
+        width: 127
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70116704df57254e903398d483a883a
+      internalID: -222747798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_5
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 773
+        width: 187
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fc8dde13d6b2e4da6c9b815cdefab0
+      internalID: -932781212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_6
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 778
+        width: 190
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002d5609e95347f41a9c2d5c4fd83867
+      internalID: 2071937551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_7
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 885
+        width: 127
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01f806efb78a6b419b2ec98e40990b1
+      internalID: -404181872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 626
+        width: 246
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd6d515301aaf84d8e9797ac618286a
+      internalID: 715562036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_9
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 816
+        width: 127
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d28e3f9e9d39c3944af73e6696d3773c
+      internalID: -1241703027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_10
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 650
+        width: 186
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6f3885a193d494d8ffb2d2acf4d381
+      internalID: -1641005647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_11
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 713
+        width: 72
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc583803e37bac243813e9e473c4134d
+      internalID: -757628315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_12
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 636
+        width: 175
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebd9bec80d05a047b4717d38e8931c2
+      internalID: -1305932701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_13
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 654
+        width: 187
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57980c39ec5b7d84d92ee5062eef2b5e
+      internalID: 645721140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_14
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 746
+        width: 125
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e24170bec11a14eb2c189dcaeee6ce
+      internalID: 1272355259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_15
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 645
+        width: 72
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e4c93cf990ea34984971656147ff1a
+      internalID: 404698166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_16
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 529
+        width: 145
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e525bef484876514b8f5d09bf6096a48
+      internalID: -1148714634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_17
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 646
+        width: 135
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7931f059e23ba4e4da75f8382337b530
+      internalID: 159327822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 557
+        width: 125
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece72a756009baa41b73ff070f8614db
+      internalID: 2077507197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_19
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 531
+        width: 120
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d680a05ec4dcf294a9320d3b7a59557a
+      internalID: 1856799224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_20
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 530
+        width: 129
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2449442988857c34d8a999c38f75417c
+      internalID: 82893443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_21
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 568
+        width: 100
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ddc6f5c6870074e849d0a4553e22d1
+      internalID: -2117285780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_22
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 519
+        width: 151
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f020916f0ea0317459c45e4ae5d2bbf2
+      internalID: 996206452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_23
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 563
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332ca2aaf975ea44ea7778300d11f8d2
+      internalID: -1749549474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_24
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 537
+        width: 138
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a0c3acee2085d4a8aac1bab3264653
+      internalID: -684666687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 488
+        width: 125
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fba2dcc44ae205408f2bbd9f456ddd6
+      internalID: 784648947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_26
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 553
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634e1aa2b46efa346a2151dbfbb400cc
+      internalID: -704015532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_27
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 494
+        width: 100
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbab0e09fe40847419f71e8ac5e91f3e
+      internalID: 409504066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 398
+        width: 116
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f46065eaa0e63344a051b96926dde7d
+      internalID: -1982045569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_29
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 441
+        width: 119
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b392000d426de408f1898192c6c87d
+      internalID: -1884871075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_30
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 400
+        width: 111
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a8e6865d4db6b4d82894a1b8e0a91d
+      internalID: 1251228632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_31
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 361
+        width: 109
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0072d72679834ed4aa7996c10f3f9d3e
+      internalID: -1164925443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_32
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 447
+        width: 125
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8780b901cd7599f4c9619dbb905c9be7
+      internalID: 104405569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_33
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 403
+        width: 129
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b6ed01c703a1e48a34d0492778bcc3
+      internalID: 1322661307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_34
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 432
+        width: 138
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d9b22bbe84a87428c6453d1c61538b
+      internalID: -384726021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 299
+        width: 112
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3373a9f13550c4c4a93e3f1e1cb1b190
+      internalID: -229335081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_36
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 316
+        width: 113
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04b46aba649a3347861a2ac5c1e7244
+      internalID: 506728682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_37
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 321
+        width: 110
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1420d897b2577504aa91f2eb92a1c88e
+      internalID: 2055631389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_38
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 319
+        width: 108
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57012581859227642bfd13e3e74b703a
+      internalID: 1425122309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_39
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 379
+        width: 78
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdfff3b0b0958349a3076eb120081fc
+      internalID: 323338047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_40
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 331
+        width: 95
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0479c3a971c4e7440a6cf03372d86f9d
+      internalID: -2136641688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_41
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 358
+        width: 125
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407427fc01b976c4b8f6f6f575756d29
+      internalID: 290059780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_42
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 314
+        width: 103
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb9cffcef31ff6469da647dde9ba0d5
+      internalID: 1358756126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_43
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 195
+        width: 102
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5196a11ec5b7f9648b2c671c23171bf5
+      internalID: 1379240879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_44
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 246
+        width: 103
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694bb60b8ec877d4b87551e22b1cba8c
+      internalID: 1715135427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_45
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 179
+        width: 106
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938f6dc797932544fab706c7ae62f3bb
+      internalID: -1112036467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_46
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 311
+        width: 72
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3fa0d352006554eaf087a4e152648d
+      internalID: 1280866186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_47
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 265
+        width: 80
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263ae2343f0b49a4b96415c746a06977
+      internalID: -935312910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_48
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 280
+        width: 82
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5b193c90659ed42a65ac5ed6e0359a
+      internalID: 1203131006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_49
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 290
+        width: 79
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcc450478d44cb449372c6027084c94
+      internalID: 1712141605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_50
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 255
+        width: 80
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ada2c2548f15a44941a75f230c6169
+      internalID: -1106835703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 182
+        width: 102
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 611146b0726170c45912572f682bcef9
+      internalID: 2089919158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_52
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 234
+        width: 82
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e2f1910d8a51340837b0380d36f073
+      internalID: 273515575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_53
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 246
+        width: 65
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d864264e8a39554dac00974a7fe9206
+      internalID: 1739616611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_54
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 199
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6ab81b24c2ce44980728d759617e7c
+      internalID: -2059849990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_55
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 203
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1b7578e6fa19b4688edfa7aa7703ec
+      internalID: -2023355775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_56
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 217
+        width: 70
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 070abc0e5be257147b29bc8d6d60a836
+      internalID: 236299304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_57
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 222
+        width: 72
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e9fff8025b7e142b6b9294cf0e3a1b
+      internalID: -466136176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_58
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 167
+        width: 67
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9515c0c7c3529b4a8662dc9b5622872
+      internalID: 420101508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_59
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 119
+        width: 97
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445d3e90474d51e489d6848ba25d4f51
+      internalID: -854524014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_60
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 175
+        width: 99
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51fbece18f77d54894692220ece0117
+      internalID: -721650656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_61
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 186
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18704f8b1a653d44da6195823386880b
+      internalID: 1585761134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_62
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 137
+        width: 56
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e65ee5f5f5fd2b49b3f7c47547d249f
+      internalID: -837018139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_63
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 145
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbb736d4ed2d244fa5311cf50e4996f
+      internalID: -375908640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_64
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 157
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9761c91ed755847b776277b92fa0a9
+      internalID: -960555116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_65
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 146
+        width: 67
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076c9c9ebd9683c4488d55c2e35a70d1
+      internalID: 1159099857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 95
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b32fcf23fb3674d9a077cf6847b2fd
+      internalID: -677690324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_67
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 31
+        width: 68
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ceaf30d381c8248831065cc3687ce4
+      internalID: -784724243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_68
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 32
+        width: 70
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5497c64453049174bb74bc0f9b1d33de
+      internalID: 1057323690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_69
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 96
+        width: 57
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c46c6b98625174f8ef0da6ac8fe079
+      internalID: -1540084639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 91
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ec26b36c48b464ea3e9bb58b1b14bb
+      internalID: -1252332998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_enemy_71
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 5
+        width: 80
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50c5c47b33f5594683eebd02cdaa2ad
+      internalID: -12626764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +1626,79 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      img_plane_enemy_0: 2020313180
+      img_plane_enemy_1: 1233224592
+      img_plane_enemy_10: -1641005647
+      img_plane_enemy_11: -757628315
+      img_plane_enemy_12: -1305932701
+      img_plane_enemy_13: 645721140
+      img_plane_enemy_14: 1272355259
+      img_plane_enemy_15: 404698166
+      img_plane_enemy_16: -1148714634
+      img_plane_enemy_17: 159327822
+      img_plane_enemy_18: 2077507197
+      img_plane_enemy_19: 1856799224
+      img_plane_enemy_2: -252915098
+      img_plane_enemy_20: 82893443
+      img_plane_enemy_21: -2117285780
+      img_plane_enemy_22: 996206452
+      img_plane_enemy_23: -1749549474
+      img_plane_enemy_24: -684666687
+      img_plane_enemy_25: 784648947
+      img_plane_enemy_26: -704015532
+      img_plane_enemy_27: 409504066
+      img_plane_enemy_28: -1982045569
+      img_plane_enemy_29: -1884871075
+      img_plane_enemy_3: -213575973
+      img_plane_enemy_30: 1251228632
+      img_plane_enemy_31: -1164925443
+      img_plane_enemy_32: 104405569
+      img_plane_enemy_33: 1322661307
+      img_plane_enemy_34: -384726021
+      img_plane_enemy_35: -229335081
+      img_plane_enemy_36: 506728682
+      img_plane_enemy_37: 2055631389
+      img_plane_enemy_38: 1425122309
+      img_plane_enemy_39: 323338047
+      img_plane_enemy_4: -222747798
+      img_plane_enemy_40: -2136641688
+      img_plane_enemy_41: 290059780
+      img_plane_enemy_42: 1358756126
+      img_plane_enemy_43: 1379240879
+      img_plane_enemy_44: 1715135427
+      img_plane_enemy_45: -1112036467
+      img_plane_enemy_46: 1280866186
+      img_plane_enemy_47: -935312910
+      img_plane_enemy_48: 1203131006
+      img_plane_enemy_49: 1712141605
+      img_plane_enemy_5: -932781212
+      img_plane_enemy_50: -1106835703
+      img_plane_enemy_51: 2089919158
+      img_plane_enemy_52: 273515575
+      img_plane_enemy_53: 1739616611
+      img_plane_enemy_54: -2059849990
+      img_plane_enemy_55: -2023355775
+      img_plane_enemy_56: 236299304
+      img_plane_enemy_57: -466136176
+      img_plane_enemy_58: 420101508
+      img_plane_enemy_59: -854524014
+      img_plane_enemy_6: 2071937551
+      img_plane_enemy_60: -721650656
+      img_plane_enemy_61: 1585761134
+      img_plane_enemy_62: -837018139
+      img_plane_enemy_63: -375908640
+      img_plane_enemy_64: -960555116
+      img_plane_enemy_65: 1159099857
+      img_plane_enemy_66: -677690324
+      img_plane_enemy_67: -784724243
+      img_plane_enemy_68: 1057323690
+      img_plane_enemy_69: -1540084639
+      img_plane_enemy_7: -404181872
+      img_plane_enemy_70: -1252332998
+      img_plane_enemy_71: -12626764
+      img_plane_enemy_8: 715562036
+      img_plane_enemy_9: -1241703027
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

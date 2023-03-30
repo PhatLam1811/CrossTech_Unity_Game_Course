@@ -2,19 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Background : BaseGameObj
+public class BaseEnemy : BaseGameObj
 {
-    [SerializeField] GameObject reloadCoord;
-
     // Start is called before the first frame update
     void Start()
     {
         viewport = Camera.main;
 
-        speed = 1f;
+        speed = 3.0f;
         movingVector = new Vector3(x: 0f, y: -1f);
     }
-
 
     // Update is called once per frame
     void Update()
@@ -30,20 +27,15 @@ public class Background : BaseGameObj
         Vector3 worldCoord = transform.position;
         Vector3 viewportCoord = viewport.WorldToViewportPoint(worldCoord);
 
-        if (viewportCoord.y < -0.5f)
+        if (viewportCoord.y < 0f)
         {
-            // reload if out of camera view
-            Reload();
+            // disappear if out of camera view from the bottom
+            Destroy(gameObject);
         }
         else
         {
-            // scoll down if not out of camera view
+            // move normally if not out of camera view
             base.Move(elapsedTime);
         }
-    }
-
-    void Reload()
-    {
-        transform.position = reloadCoord.transform.position;
     }
 }

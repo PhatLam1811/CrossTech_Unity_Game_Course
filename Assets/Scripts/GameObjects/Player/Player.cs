@@ -12,6 +12,8 @@ public class Player : BaseGameObj
     // Start is called before the first frame update
     void Start()
     {
+        viewport = Camera.main;
+
         speed = 3.0f;
         cooldown = 1.0f;
     }

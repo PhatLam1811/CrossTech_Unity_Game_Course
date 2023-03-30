@@ -7,6 +7,8 @@ public class BaseGameObj : MonoBehaviour
     protected float speed;
     protected Vector3 movingVector;
 
+    protected Camera viewport;
+
     // Start is called before the first frame update
     void Start()
     {

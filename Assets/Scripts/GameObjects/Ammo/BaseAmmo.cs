@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class BaseAmmo : BaseGameObj
 {
-    protected Camera mainCam;
-
     // Start is called before the first frame update
     void Start()
     {
-        mainCam = Camera.main;
+        viewport = Camera.main;
 
         speed = 2f;
         movingVector = new Vector3(x: 0f, y: 1f);
@@ -27,7 +25,7 @@ public class BaseAmmo : BaseGameObj
     {
         // switch to viewport's (main camera) normalized coordinate
         Vector3 worldCoord = transform.position;
-        Vector3 viewportCoord = mainCam.WorldToViewportPoint(worldCoord);
+        Vector3 viewportCoord = viewport.WorldToViewportPoint(worldCoord);
 
         if (viewportCoord.y >= 0f && viewportCoord.y <= 1f )
         {
