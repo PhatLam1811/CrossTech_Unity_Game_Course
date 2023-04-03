@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfGunBarrel: {fileID: 9110694629215542766}
-  pfAmmoTypes:
+  pfBullets:
   - {fileID: 1921367264671183940, guid: 46b6bc16008153f468ab5a048a519a2c, type: 3}
   - {fileID: 2727749215040929959, guid: 673b436a46dc4894b9b686720760efd2, type: 3}
   - {fileID: 755907320091952563, guid: f9588899171b6dd4db89fdca84e2b87d, type: 3}

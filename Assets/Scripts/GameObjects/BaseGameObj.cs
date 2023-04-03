@@ -4,35 +4,40 @@ using UnityEngine;
 
 public class BaseGameObj : MonoBehaviour
 {
+    protected Camera viewport;
+
     protected float speed;
     protected Vector3 movingVector;
 
-    protected Camera viewport;
-
-    protected float GetElapsedTime()
+    // Start is called before the first frame update
+    protected void Start()
     {
-        return Time.deltaTime;
+        Init();
     }
 
-    public string GetTypeName()
+    // Update is called once per frame
+    protected virtual void Update()
     {
-        return GetType().Name;
+        float elapsedTime = GetElapsedTime();
+
+        Move(elapsedTime);
     }
 
-    public void SetMovingVector(Vector3 intendedVector)
-    {
-        movingVector = intendedVector;
-    }
+    protected float GetElapsedTime() { return Time.deltaTime; }
+    public string GetClassName() { return GetType().Name; }
+    public void SetMovingVector(Vector3 movingVector) { this.movingVector = movingVector; }
+    public void SetSpeed(float speed) { this.speed = speed; }
 
-    public void SetSpeed(float speed)
+    protected virtual void Init()
     {
-        this.speed = speed;
+        viewport = Camera.main;
+
+        speed = 0f;
+        movingVector = new Vector3(x: 0f, y: 0f);
     }
 
     public virtual void Move(float elapsedTime)
     {
-        // Debug.Log(GetType().Name + " Move");
-
         transform.position += movingVector * elapsedTime * speed;
     }
 }

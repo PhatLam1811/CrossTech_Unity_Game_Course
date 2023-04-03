@@ -4,24 +4,14 @@ using UnityEngine;
 
 public class Background : BaseGameObj
 {
-    [SerializeField] GameObject reloadCoord;
+    [SerializeField] private GameObject reloadCoord;
 
-    // Start is called before the first frame update
-    void Start()
+    protected override void Init()
     {
-        viewport = Camera.main;
+        base.Init();
 
         speed = 1f;
         movingVector = new Vector3(x: 0f, y: -1f);
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        float elapsedTime = GetElapsedTime();
-
-        Move(elapsedTime);
     }
 
     public override void Move(float elapsedTime)
