@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,3304 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: img_bullet_enemy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 777
+        width: 88
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a7b985babe3974eaf9297786df496f
+      internalID: 1546527280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 846
+        width: 59
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f2030be6545654cbc44c7c43b886b1
+      internalID: -71522395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 847
+        width: 52
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4cf15cdc9c6894095b45d266a1f816
+      internalID: -195318317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 847
+        width: 52
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985c28547114a54469314768867b677e
+      internalID: -419547116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 890
+        width: 57
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d67bf9d3613ee4988d9901ed7150c9
+      internalID: 1295865234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_5
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 916
+        width: 62
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7765b1ca8a890a4685418388bffa426
+      internalID: 1578264691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_6
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 920
+        width: 54
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e54a97f8c1ef9458af1e41c027e87c
+      internalID: 1079628355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_7
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 920
+        width: 54
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b99a5c4431cdb44b9bba6a1116400a2
+      internalID: 1608546247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_8
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 933
+        width: 92
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90f4749d39ea5b448019205f473ba98
+      internalID: -1687745014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_9
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 941
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0997ca5532fa8b4498bce91e8007a88f
+      internalID: 1661700686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_10
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 945
+        width: 47
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364844ea4f1621d499832f189abbd6ba
+      internalID: -1137727777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_11
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 955
+        width: 71
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce5bf7079ee21649a9c07543512a737
+      internalID: -19181416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_12
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 954
+        width: 75
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab5891aa214fbc46b9369b876815890
+      internalID: -603222845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_13
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 954
+        width: 75
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3ba79afbb86e942ae28d90ea5d7f8e
+      internalID: 728496865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_14
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 959
+        width: 43
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4896555e6eda4641814455f40839b64
+      internalID: 608461206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_15
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 811
+        width: 54
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06861379a15ce8545b3cf4bb49b7ba4b
+      internalID: 1426711119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_16
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 815
+        width: 54
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e357e9533c9f8143b044d718d21be59
+      internalID: 1164744428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_17
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 825
+        width: 92
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b112054fcc4424e93a41b43af660f6
+      internalID: -410298048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_18
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 848
+        width: 82
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f764cfac13a842d409efec6f88caba73
+      internalID: -519690166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_19
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 859
+        width: 48
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9395307bfe16c44eae928f8b5692cba
+      internalID: -330862081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_20
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 873
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465d917ee74b3864583f3f19080e9d29
+      internalID: 655092155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_21
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 883
+        width: 75
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d17f2fcc3d48741be8c47824ed918b
+      internalID: -1135875363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_22
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 883
+        width: 89
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee239c9e14ea9a34da016d752b1ab46c
+      internalID: -808114628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_23
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 889
+        width: 38
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f5d013a31f57e4d90336a3b02c3d33
+      internalID: -1659782445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_24
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 778
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2672eeeb353e7ac4ebd5ee34a866e158
+      internalID: 1401186725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_25
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 777
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f402ccbaae43a6458084699fca90240
+      internalID: -947120231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_26
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 777
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b5d9e4c87c2c9429b920e12f9bd0d3
+      internalID: 1927821359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_27
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 778
+        width: 30
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3161dfb7c8bd6bc46af8c5f497b9f828
+      internalID: 921031740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_28
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 781
+        width: 62
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2dbef02cbede6943836603564bd939f
+      internalID: 1713704460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_29
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 739
+        width: 82
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e5e629fa5ce3145bb19df595761c06
+      internalID: 1501953504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_30
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 768
+        width: 51
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42789642b118fba48a6108a5b710a1f4
+      internalID: -191898028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_31
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 789
+        width: 71
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdaddf07bd25ee4da4d249bb119138b
+      internalID: 1177248760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_32
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 802
+        width: 75
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072ca13cc038a4d40be7b39151966adc
+      internalID: 591436569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_33
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 812
+        width: 89
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316e00fc875a2ef43b9ac52178a65d0b
+      internalID: -804339017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_34
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 821
+        width: 59
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6df5973356358240b1d95592754fe63
+      internalID: -869816433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_35
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 579
+        width: 60
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4c9db7c2572c145a98d6350a04549c
+      internalID: 696498783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_36
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 582
+        width: 134
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4aa8ccca97c3924d811ab51a202b7e3
+      internalID: -1861086334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_37
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 627
+        width: 42
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9f74998be3b7d41bf3d32500eabf57
+      internalID: -1885314288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_38
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 627
+        width: 42
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ae8b0a649547a498e44cbb10e9fd3b
+      internalID: 1293751634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_39
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 669
+        width: 62
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c274b0f6c170c41be9c4c1e1e10374
+      internalID: 1385298212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_40
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 677
+        width: 100
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3baffd4b663475648ad655711f4d5313
+      internalID: -1946337184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_41
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 720
+        width: 92
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f71731962ab3c42b3e802088f5749a
+      internalID: -1470198308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_42
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 695
+        width: 72
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784b1601a5af2f24a82d1db09ecfbd36
+      internalID: -1006152654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_43
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 717
+        width: 89
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb2e18c9f399be478361e9d130d15b7
+      internalID: 637538747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_44
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 741
+        width: 72
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c208cd20402f064aa4a5f926585787e
+      internalID: 1384141933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_45
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 749
+        width: 74
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63802b7c9c656b8409a8d979ed1a6615
+      internalID: -1929029375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_46
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 631
+        width: 85
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f089190fd4f81794bac962102fe466e9
+      internalID: -676614389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_47
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 654
+        width: 82
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad2ace4610a5914ab3d9e1e0e72431a
+      internalID: -874630755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_48
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 625
+        width: 72
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f488c553f9313d3468405d0eba3cd2a5
+      internalID: -1956436663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_49
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 646
+        width: 73
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c805862e708ce4aa7916f274606e63
+      internalID: 1856830595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_50
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 670
+        width: 86
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fae524f93fc9ba489dedca12daf336c
+      internalID: -525916453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_51
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 678
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc5afbece075f94690dcc2930eab738
+      internalID: -1461955612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_52
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 586
+        width: 64
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9427a1a6accc1c04fb42bbe6dc6e1a6d
+      internalID: -2086428527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_53
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 506
+        width: 51
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4706b504b26b314f8e7acc49dbf9938
+      internalID: -607930232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_54
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 560
+        width: 62
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf32ec3e843dfc244baa6c0c77bf04c3
+      internalID: 744711031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_55
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 581
+        width: 92
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aba295383fc6a942bfae1ec9454c47b
+      internalID: -1902244840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_56
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 547
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f3736d9f33057418c42bc82480751c
+      internalID: -484103235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_57
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 581
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940a47c76868b734f8d5986c7868ac16
+      internalID: 1146820799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_58
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 575
+        width: 70
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bccc7d125b4186e4581f1db248880e77
+      internalID: 1237385551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_59
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 599
+        width: 72
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7c3924586e7da4fa68895349da3ba5
+      internalID: 1989668489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_60
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 607
+        width: 101
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607433725f1acec4f86f5b77c664ed57
+      internalID: 480081884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_61
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 381
+        width: 59
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab256edcf6811bf4bb0d22981abc467a
+      internalID: -752549893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_62
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 404
+        width: 52
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7f2b4cccf3b04418efb3be014a5f81
+      internalID: -1645417607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_63
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 405
+        width: 59
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ed1f2de7d78bf4cb5c482729e426ee
+      internalID: -209275569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_64
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 424
+        width: 30
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444a06489e03eee41989c60a470749b5
+      internalID: 1360456636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_65
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 451
+        width: 57
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082e33c607e258444bfab85cb77f8d47
+      internalID: 363879119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_66
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 507
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a8919c6a145d3498cf458d1402214c
+      internalID: -146625465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_67
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 508
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03edd218563460645973b2d2e30e4504
+      internalID: -1413675510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_68
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 509
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f33c36d5d8b5549a97f17bcfdea0b7
+      internalID: -1345506309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_69
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 474
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e80d7dd58c6a946a735b8c6f6bc87b
+      internalID: 1662041296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_70
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 511
+        width: 72
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f6bf210fbd168646bddc8948aeaab6b
+      internalID: -693727212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_71
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 504
+        width: 73
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0891a1493b6556145bd14555bb54f114
+      internalID: 190040449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_72
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 529
+        width: 72
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c3ea769cdb5a84cb3349c5a0433ac2
+      internalID: -38075312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_73
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 537
+        width: 75
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfef8d8557a514047baaa1be51783974
+      internalID: 1892219455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_74
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 537
+        width: 39
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29546a2e7fbb3ce43a3d48c2a6470585
+      internalID: 1562500728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_75
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 452
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8974af9b361804aa1e8f791af2358f
+      internalID: 725115119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_76
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 452
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00dec4985cf94a44691cb2411a920c88
+      internalID: 245723146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_77
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 454
+        width: 50
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de2cf4ae2ae9c4444a982a3f64e685fc
+      internalID: -801928375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_78
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 456
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4762ad3c626da614b8beca4501ce7716
+      internalID: -1741634163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_79
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 424
+        width: 82
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb8a3237457de848a4f673c3cd0ce45
+      internalID: 535697183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_80
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 403
+        width: 72
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6691540380f42246b3e1be91d4a4fb3
+      internalID: -1354732850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_81
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 430
+        width: 82
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11864759441a364aa724dc14d072813
+      internalID: -1913879899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_82
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 457
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdca6561ef92451438c6c8bcd58367e7
+      internalID: 1283719499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_83
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 465
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4bdf872e238ff14a8649a1879138f3f
+      internalID: -682117204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_84
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 467
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b370e42d05a75fa488d53d7ce9dfada4
+      internalID: -1133791375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_85
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 228
+        width: 52
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec240b4e5fad14d4989bfd95e6ca2ff5
+      internalID: 2128982200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_86
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 234
+        width: 54
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab7d2c6e60e9cb46b3278df26fdb13d
+      internalID: -1677411701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_87
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 238
+        width: 60
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e4bc435b88f34438d9b61c3cac279f
+      internalID: -1520208563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_88
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 316
+        width: 57
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29450e0e5a206e24987cc844a12f7414
+      internalID: 1090744856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_89
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 343
+        width: 62
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2f29294e8725945a361030b08a4cc0
+      internalID: -1001995354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_90
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 350
+        width: 30
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6291262caf86848a5b30f7b1e93767
+      internalID: 2053153662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_91
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 358
+        width: 52
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd5b533ff6c8d74d9e31f5d429ee953
+      internalID: 877688156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_92
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 360
+        width: 52
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5aa0a7b4dec5244985a1c1d411b0eb
+      internalID: 1602793561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_93
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 346
+        width: 48
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed0d4591eb71194ca0fbc6809bef3b9
+      internalID: 1791253363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_94
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 335
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd4ceb39e21a96429e793ca0944eb13
+      internalID: 1477646802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_95
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 362
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19dfe78f366ec0041855eaac4a9397f5
+      internalID: 1114948063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_96
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 386
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05373d6a427436140b9b641cc885ecdb
+      internalID: -2070384504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_97
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 394
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ba41d739095d445913fdca1bbe9a39
+      internalID: 1201105049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_98
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 397
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fd509740282c442a33496a5e0d8a61
+      internalID: 104876170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_99
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 184
+        width: 58
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb92db656fcf6b44aaaaf174bfb14c4
+      internalID: -1287559664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_100
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 241
+        width: 30
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f644ffc2db37a47bfd648329e846bc
+      internalID: -584233043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_101
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 241
+        width: 30
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3bff1096c013e14d9c41624b941ed06
+      internalID: 2032011848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_102
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 254
+        width: 52
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4d3a8448fa52140919402b3c05dec6
+      internalID: 1717604414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_103
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 262
+        width: 52
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ae436585aa178459677120f08e74d1
+      internalID: 309851475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_104
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 265
+        width: 92
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738fc281f6b182e418d28f7fb0dfa5f6
+      internalID: 390842074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_105
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 268
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa626b1b1c2d0a49811cb1b317ee344
+      internalID: -2005339509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_106
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 264
+        width: 37
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd6a5cd7a535104cbe2b86f4c091d92
+      internalID: -1898024912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_107
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 291
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283cb52485f1eae48a2ad54503e797b4
+      internalID: -1301379078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_108
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 315
+        width: 68
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4500c24e9d5ef054a913db6c14b8df93
+      internalID: -8095674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_109
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 323
+        width: 68
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6578ba4999f4df540897ca3ec847b7bd
+      internalID: -360101037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_110
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 329
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56317f6ed56084c4aa8d52732886052b
+      internalID: 515099052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_111
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 239
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b055611daf0f4b84282ecc5d94689a81
+      internalID: -429552866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_112
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 167
+        width: 92
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93953fadaaa325740b0e07765233d8cb
+      internalID: 743092914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_113
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 184
+        width: 37
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aad0476a197c254bbe67a80a0c393bf
+      internalID: 1112179299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_114
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 194
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd9ae25871500a43bf1da3f7b808bd3
+      internalID: 188492964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_115
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 195
+        width: 35
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c85deb344f659d647b8a288d2b0770db
+      internalID: 662623041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_116
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 223
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e73116a3f207cef478571acdd03b564d
+      internalID: -850063097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_117
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 247
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add5e4aee26232b418be27f51bc72f4a
+      internalID: -930070760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_118
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 252
+        width: 68
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da9cf539fa94b342a10101c601eb299
+      internalID: 1660543682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_119
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 257
+        width: 68
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884eed8977a939d4c9269edfb98b1202
+      internalID: -138768424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_120
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 226
+        width: 8
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e471e648dce14bf459b9862586bcb801
+      internalID: -42842486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_121
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afcf95500832b384eb0f2b857ba205ee
+      internalID: 1259577107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_122
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 197
+        width: 64
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f6ea116bafc3b48b40264c632309fe
+      internalID: 1987913645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_123
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 134
+        width: 54
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e3c88de956c5b439acc4a92e9188c0
+      internalID: -2112067162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_124
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 139
+        width: 30
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882109d31c7c669439b85f103883a177
+      internalID: -1032043827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_125
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 139
+        width: 30
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef961918690a4943bdfdd9faec565f0
+      internalID: 138607547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_126
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 158
+        width: 52
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5417f6f807c0c546bff4e71400d61da
+      internalID: 1945608208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_127
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 178
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86a0d0d319665f46a650932d27bddaa
+      internalID: 374756620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_128
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 184
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d60c987f6258244dacc7701fc0128e1
+      internalID: -1322484343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_129
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 189
+        width: 58
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd2fc2d09ca4f944fa004c512a914e63
+      internalID: -1710524165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_130
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 185
+        width: 64
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72bbfb7245517b2439f5769d44bccd64
+      internalID: 356856308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_131
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 35
+        width: 38
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b918540448205fc4b8dd335466db3fac
+      internalID: -5553310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_132
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 62
+        width: 57
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0585c2351321774a9491883db212760
+      internalID: -1935673053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_133
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 119
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8681bf067f9fe9141b8d8aa5fb81e1bc
+      internalID: 1441497381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_134
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 127
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc014f9ac66e6164f885dcf443200722
+      internalID: -792337854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_135
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 120
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cceca5ccb823cd0419122e4ff91af0be
+      internalID: -1324491219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_136
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 180
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea12d91463d7b94e93e5904af4c0363
+      internalID: 605912790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_137
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 62
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34600acd08bc544e813c65e37f00856
+      internalID: 821514452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_138
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 62
+        width: 76
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4e82c99e7ce9e40bb2e1c722b88e7e
+      internalID: 1498445206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_139
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 62
+        width: 52
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a220a87efd2756949ad07466ceacaa86
+      internalID: -438137124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_140
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 88
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9949677edccc115439b96e62cc89be41
+      internalID: 506852979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_141
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 86
+        width: 37
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c107364d9fcad4ebcd65245b5d296d
+      internalID: -883293266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_142
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 103
+        width: 37
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb676ee40d90a44ba855022d54a8cb8
+      internalID: -1160767251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_143
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 46
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf3c7de21b50fe41952b984ec0c3b93
+      internalID: -1977003062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_144
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 109
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397f305d7b619df43bb0d27b7e598147
+      internalID: -995934928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_145
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 115
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79923edbdbb9be24b8f1d50f58a8c6b9
+      internalID: -1125372652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_146
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 4
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c85dac17b9fd9f43afde443d54fa089
+      internalID: 1515807699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_147
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 10
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198821d6c4049bf4dbd545427dd6e26d
+      internalID: 1018218551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_148
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 10
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeaa862bb11e3e74e890251c5920e7ee
+      internalID: -1360584262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_149
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 10
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3983df13dbbfd3549af18d1730d14ec2
+      internalID: 120910828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_150
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 6
+        width: 47
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f0e6a7fe8f5754091f61e8969fb004
+      internalID: -1779850848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_151
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 5
+        width: 37
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b572bf8881a415d4485115641fd8a49b
+      internalID: 1566530978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_152
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 5
+        width: 37
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84c3518ad94e364581ab5085d5cc4cb
+      internalID: -1987624948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_153
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 23
+        width: 38
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295454150f217e648b054a0d4a9a27d4
+      internalID: 1128286918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_154
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 40
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1ef1dd0aa10294dabf2516fc92b3ed
+      internalID: -1146514299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_155
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 40
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d28c3e7f111e674b85dc75f1b8279c1
+      internalID: -1735169902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_enemy_156
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 46
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cccab6270a20cd4ebcb06f86bda3804
+      internalID: -431467408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +3411,164 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      img_bullet_enemy_0: 1546527280
+      img_bullet_enemy_1: -71522395
+      img_bullet_enemy_10: -1137727777
+      img_bullet_enemy_100: -584233043
+      img_bullet_enemy_101: 2032011848
+      img_bullet_enemy_102: 1717604414
+      img_bullet_enemy_103: 309851475
+      img_bullet_enemy_104: 390842074
+      img_bullet_enemy_105: -2005339509
+      img_bullet_enemy_106: -1898024912
+      img_bullet_enemy_107: -1301379078
+      img_bullet_enemy_108: -8095674
+      img_bullet_enemy_109: -360101037
+      img_bullet_enemy_11: -19181416
+      img_bullet_enemy_110: 515099052
+      img_bullet_enemy_111: -429552866
+      img_bullet_enemy_112: 743092914
+      img_bullet_enemy_113: 1112179299
+      img_bullet_enemy_114: 188492964
+      img_bullet_enemy_115: 662623041
+      img_bullet_enemy_116: -850063097
+      img_bullet_enemy_117: -930070760
+      img_bullet_enemy_118: 1660543682
+      img_bullet_enemy_119: -138768424
+      img_bullet_enemy_12: -603222845
+      img_bullet_enemy_120: -42842486
+      img_bullet_enemy_121: 1259577107
+      img_bullet_enemy_122: 1987913645
+      img_bullet_enemy_123: -2112067162
+      img_bullet_enemy_124: -1032043827
+      img_bullet_enemy_125: 138607547
+      img_bullet_enemy_126: 1945608208
+      img_bullet_enemy_127: 374756620
+      img_bullet_enemy_128: -1322484343
+      img_bullet_enemy_129: -1710524165
+      img_bullet_enemy_13: 728496865
+      img_bullet_enemy_130: 356856308
+      img_bullet_enemy_131: -5553310
+      img_bullet_enemy_132: -1935673053
+      img_bullet_enemy_133: 1441497381
+      img_bullet_enemy_134: -792337854
+      img_bullet_enemy_135: -1324491219
+      img_bullet_enemy_136: 605912790
+      img_bullet_enemy_137: 821514452
+      img_bullet_enemy_138: 1498445206
+      img_bullet_enemy_139: -438137124
+      img_bullet_enemy_14: 608461206
+      img_bullet_enemy_140: 506852979
+      img_bullet_enemy_141: -883293266
+      img_bullet_enemy_142: -1160767251
+      img_bullet_enemy_143: -1977003062
+      img_bullet_enemy_144: -995934928
+      img_bullet_enemy_145: -1125372652
+      img_bullet_enemy_146: 1515807699
+      img_bullet_enemy_147: 1018218551
+      img_bullet_enemy_148: -1360584262
+      img_bullet_enemy_149: 120910828
+      img_bullet_enemy_15: 1426711119
+      img_bullet_enemy_150: -1779850848
+      img_bullet_enemy_151: 1566530978
+      img_bullet_enemy_152: -1987624948
+      img_bullet_enemy_153: 1128286918
+      img_bullet_enemy_154: -1146514299
+      img_bullet_enemy_155: -1735169902
+      img_bullet_enemy_156: -431467408
+      img_bullet_enemy_16: 1164744428
+      img_bullet_enemy_17: -410298048
+      img_bullet_enemy_18: -519690166
+      img_bullet_enemy_19: -330862081
+      img_bullet_enemy_2: -195318317
+      img_bullet_enemy_20: 655092155
+      img_bullet_enemy_21: -1135875363
+      img_bullet_enemy_22: -808114628
+      img_bullet_enemy_23: -1659782445
+      img_bullet_enemy_24: 1401186725
+      img_bullet_enemy_25: -947120231
+      img_bullet_enemy_26: 1927821359
+      img_bullet_enemy_27: 921031740
+      img_bullet_enemy_28: 1713704460
+      img_bullet_enemy_29: 1501953504
+      img_bullet_enemy_3: -419547116
+      img_bullet_enemy_30: -191898028
+      img_bullet_enemy_31: 1177248760
+      img_bullet_enemy_32: 591436569
+      img_bullet_enemy_33: -804339017
+      img_bullet_enemy_34: -869816433
+      img_bullet_enemy_35: 696498783
+      img_bullet_enemy_36: -1861086334
+      img_bullet_enemy_37: -1885314288
+      img_bullet_enemy_38: 1293751634
+      img_bullet_enemy_39: 1385298212
+      img_bullet_enemy_4: 1295865234
+      img_bullet_enemy_40: -1946337184
+      img_bullet_enemy_41: -1470198308
+      img_bullet_enemy_42: -1006152654
+      img_bullet_enemy_43: 637538747
+      img_bullet_enemy_44: 1384141933
+      img_bullet_enemy_45: -1929029375
+      img_bullet_enemy_46: -676614389
+      img_bullet_enemy_47: -874630755
+      img_bullet_enemy_48: -1956436663
+      img_bullet_enemy_49: 1856830595
+      img_bullet_enemy_5: 1578264691
+      img_bullet_enemy_50: -525916453
+      img_bullet_enemy_51: -1461955612
+      img_bullet_enemy_52: -2086428527
+      img_bullet_enemy_53: -607930232
+      img_bullet_enemy_54: 744711031
+      img_bullet_enemy_55: -1902244840
+      img_bullet_enemy_56: -484103235
+      img_bullet_enemy_57: 1146820799
+      img_bullet_enemy_58: 1237385551
+      img_bullet_enemy_59: 1989668489
+      img_bullet_enemy_6: 1079628355
+      img_bullet_enemy_60: 480081884
+      img_bullet_enemy_61: -752549893
+      img_bullet_enemy_62: -1645417607
+      img_bullet_enemy_63: -209275569
+      img_bullet_enemy_64: 1360456636
+      img_bullet_enemy_65: 363879119
+      img_bullet_enemy_66: -146625465
+      img_bullet_enemy_67: -1413675510
+      img_bullet_enemy_68: -1345506309
+      img_bullet_enemy_69: 1662041296
+      img_bullet_enemy_7: 1608546247
+      img_bullet_enemy_70: -693727212
+      img_bullet_enemy_71: 190040449
+      img_bullet_enemy_72: -38075312
+      img_bullet_enemy_73: 1892219455
+      img_bullet_enemy_74: 1562500728
+      img_bullet_enemy_75: 725115119
+      img_bullet_enemy_76: 245723146
+      img_bullet_enemy_77: -801928375
+      img_bullet_enemy_78: -1741634163
+      img_bullet_enemy_79: 535697183
+      img_bullet_enemy_8: -1687745014
+      img_bullet_enemy_80: -1354732850
+      img_bullet_enemy_81: -1913879899
+      img_bullet_enemy_82: 1283719499
+      img_bullet_enemy_83: -682117204
+      img_bullet_enemy_84: -1133791375
+      img_bullet_enemy_85: 2128982200
+      img_bullet_enemy_86: -1677411701
+      img_bullet_enemy_87: -1520208563
+      img_bullet_enemy_88: 1090744856
+      img_bullet_enemy_89: -1001995354
+      img_bullet_enemy_9: 1661700686
+      img_bullet_enemy_90: 2053153662
+      img_bullet_enemy_91: 877688156
+      img_bullet_enemy_92: 1602793561
+      img_bullet_enemy_93: 1791253363
+      img_bullet_enemy_94: 1477646802
+      img_bullet_enemy_95: 1114948063
+      img_bullet_enemy_96: -2070384504
+      img_bullet_enemy_97: 1201105049
+      img_bullet_enemy_98: 104876170
+      img_bullet_enemy_99: -1287559664
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

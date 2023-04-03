@@ -41,12 +41,15 @@ public class BuckshotBullet : BaseBullet
         Vector3 leftShotVector = new Vector3(x: -0.5f, y: 1f);
         Vector3 rightShotVector = new Vector3(x: 0.5f, y: 1f);
 
+        // exploded bullets' moving vector
         leftShot.GetComponent<ExplodedBuckshot>().SetMovingVector(leftShotVector);
         rightShot.GetComponent<ExplodedBuckshot>().SetMovingVector(rightShotVector);
 
+        // exploded bullets' moving speed
         leftShot.GetComponent<ExplodedBuckshot>().SetSpeed(explodingSpeed);
         rightShot.GetComponent<ExplodedBuckshot>().SetSpeed(explodingSpeed);
 
+        // exploded bullets' rotation
         float rotateAngle = Vector3.Angle(movingVector, leftShotVector);
 
         leftShot.GetComponent<ExplodedBuckshot>().transform.Rotate(Vector3.forward, rotateAngle);

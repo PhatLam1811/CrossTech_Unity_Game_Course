@@ -22,6 +22,8 @@ public class Player : BaseCharacter
         Move(elapsedTime);
 
         Attack(elapsedTime);
+
+        Debug.Log("Player's HP = " + health);
     }
 
     void OnTriggerEnter2D(Collider2D collision) { }
