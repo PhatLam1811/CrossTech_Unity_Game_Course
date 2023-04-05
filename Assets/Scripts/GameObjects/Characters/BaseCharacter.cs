@@ -6,6 +6,8 @@ public class BaseCharacter : BaseGameObj
 {
     protected int health;
 
+    public int GetHealth() { return health; }
+
     protected override void Init()
     {
         base.Init();

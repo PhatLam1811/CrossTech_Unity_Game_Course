@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class BaseEnemy : BaseCharacter
 {
+    protected int point;
+
+    public int GetPoint() { return point; }
+
     protected override void Init()
     {
         base.Init();
 
         health = 1;
-
+        point = 1;
         speed = 3f;
         movingVector = new Vector3(x: 0f, y: -1f);
     }

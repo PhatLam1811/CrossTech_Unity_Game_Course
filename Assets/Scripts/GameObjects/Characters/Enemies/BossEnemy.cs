@@ -36,6 +36,7 @@ public class BossEnemy : BaseEnemy
 
         health = 10;
         speed = 1f;
+        point = 5;
         movingVector = new Vector3(x: 0f, y: -1f);
         cooldown = atkInterval;
         isAttacking = false;

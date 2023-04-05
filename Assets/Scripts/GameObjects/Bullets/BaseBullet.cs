@@ -45,6 +45,12 @@ public class BaseBullet : BaseGameObj
 
     public virtual void OnCollidedWithEnemy(BaseEnemy enemy)
     {
+        // score increase if enemy dies
+        if (enemy.GetHealth() <= damage)
+            GameObject.Find("Player")
+                .GetComponent<Player>()
+                .SetScore(enemy.GetPoint());
+
         enemy.OnCollidedWithBullet(this);
 
         // bullet disapear after hitting an enemy
