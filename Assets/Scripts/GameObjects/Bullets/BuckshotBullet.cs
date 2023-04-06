@@ -14,7 +14,7 @@ public class BuckshotBullet : BaseBullet
     // Update is called once per frame
     protected override void Update()
     {
-        float elapsedTime = GetElapsedTime();
+        float elapsedTime = Time.deltaTime;
 
         if (!isExploded) countdown -= elapsedTime;
 

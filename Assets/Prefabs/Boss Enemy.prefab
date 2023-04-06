@@ -58,7 +58,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674428938569542719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24, y: 7.38, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5994, y: 0.5994, z: 0.5994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1827641be0d79d4f97d6c0187882a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfAmmoType: {fileID: 7808168811455305159, guid: d868b439d7739ad4694d293256d6d45e, type: 3}
+  pfBullet: {fileID: 7808168811455305159, guid: d868b439d7739ad4694d293256d6d45e, type: 3}
   pfGunBarrel: {fileID: 674428937508711128}
 --- !u!212 &674428938569542712
 SpriteRenderer:

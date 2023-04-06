@@ -1,21 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseEnemy : BaseCharacter
 {
+    protected float health;
     protected int point;
 
+    public float GetHealth() { return health; }
     public int GetPoint() { return point; }
 
     protected override void Init()
     {
         base.Init();
 
-        health = 1;
-        point = 1;
-        speed = 3f;
-        movingVector = new Vector3(x: 0f, y: -1f);
+        this.health = 1f;
+        this.point = 1;
+        this.speed = 3f;
+        this.movingVector = Vector3.down;
     }
 
     public override void Move(float elapsedTime)
@@ -34,8 +37,22 @@ public class BaseEnemy : BaseCharacter
         }
     }
 
-    public virtual void OnCollidedWithPlayer()
+    public override void OnTakenDamage(float dmgTaken)
     {
-        OnDamaged(1);
+        this.health -= dmgTaken;
+
+        if (this.health <= 0f) this.OnDefeated();
+    }
+
+    public virtual void OnCollidedWithPlayer(Player player, float dmgTaken)
+    {
+        this.OnTakenDamage(dmgTaken);
+    }
+
+    public virtual void OnDefeated()
+    {
+        GamePlayManager.Instance.OnDefeatEnemy(this.point);
+
+        Destroy(this.gameObject);
     }
 }

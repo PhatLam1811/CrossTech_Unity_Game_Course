@@ -2,88 +2,32 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class Player : BaseCharacter
 {
-    private const float atkInterval = 1f;
-
     private float cooldown;
-    private int currentBullet;
-    private int score;
-    private int homingBulletAmount;
-    private int buckshotBulletAmount;
 
     [SerializeField] private GameObject pfGunBarrel;
-    [SerializeField] private List<GameObject> pfBullets;
-    public Image imgHealthBar;
-    public Button btnSpecialAkt1;
-    public Button btnSpecialAkt2;
-    public TMP_Text txtHomingAmount;
-    public TMP_Text txtBuckshotAmount;
-    public TMP_Text txtScore;
 
     // Update is called once per frame
     protected override void Update()
     {
-        float elapsedTime = GetElapsedTime();
+        if (this.isPlaying)
+        {
+            float elapsedTime = Time.deltaTime;
 
-        ProcessInput();
-
-        Move(elapsedTime);
-
-        Attack(elapsedTime);
+            this.Attack(elapsedTime);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision) 
     { 
         if (collision.TryGetComponent(out BaseEnemy enemy))
         {
-            OnColliedWithEnemy();
-        }
-    }
+            EnemyManager.Instance.OnCollidedWithPlayer(enemy, this, damage);
 
-    public void SetCurrentBullet(int currentBullet)
-    {
-        if (currentBullet < 0)
-        {
-            this.currentBullet = pfBullets.Count - 1;
-        }
-        else if (currentBullet >= pfBullets.Count)
-        {
-            this.currentBullet = 0;
-        }
-        else
-        {
-            this.currentBullet = currentBullet;
-        }    
-    }
-    public void SetScore(int point) 
-    { 
-        score += point;
-        txtScore.text = score.ToString();
-    }
-
-    public void ProcessInput()
-    {
-        // ======================================
-        // Move
-        // ======================================
-        // get normalized moving input directions
-        float hor = Input.GetAxis("Horizontal");
-        float ver = Input.GetAxis("Vertical");
-
-        SetMovingVector(new Vector3(x: hor, y: ver));
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            // previous type
-            SetCurrentBullet(currentBullet - 1);
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            // next type
-            SetCurrentBullet(currentBullet + 1);
+            this.OnTakenDamage(enemy.GetDamageInflict());
         }
     }
 
@@ -91,100 +35,46 @@ public class Player : BaseCharacter
     {
         base.Init();
 
-        health = 10;
-        currentBullet = 0;
-        cooldown = atkInterval;
-        speed = 3f;
-        score = 0;
-        imgHealthBar.fillAmount = health / 10f;
-        homingBulletAmount = 5;
-        buckshotBulletAmount = 5;
-        txtHomingAmount.text = "x" + homingBulletAmount.ToString();
-        txtBuckshotAmount.text = "x" + buckshotBulletAmount.ToString();
-        txtScore.text = score.ToString();
+        this.cooldown = GameDefine.DEFAULT_PLAYER_ATK_CD;
+        this.speed = GameDefine.DEFAULT_PLAYER_SPEED;
     }
 
     public override void Attack(float elapsedTime)
     {
-        cooldown -= elapsedTime;
+        this.cooldown -= elapsedTime;
 
         // shoot a bullet after cooldown
-        if (cooldown <= 0.0f)
+        if (this.cooldown <= 0.0f)
         {
-            Vector3 barrelPos = pfGunBarrel.transform.position;
+            Vector3 barrelPos = this.pfGunBarrel.transform.position;
+            int currentBullet = GamePlayManager.Instance.GetPlayerCurrentBullet();
 
-            Instantiate(pfBullets[currentBullet], barrelPos, Quaternion.identity);
+            BulletManager.Instance.ShootBulletOfType(currentBullet, barrelPos);
 
             // reset cooldown
-            cooldown = atkInterval;
+            this.cooldown = GameDefine.DEFAULT_PLAYER_ATK_CD;
         }
     }
 
-    public void SpecialAttack1()
+    public override void OnTakenDamage(float dmgTaken)
     {
-        // Debug.Log("Btn 1 Cliked!");
-
-        Vector3 barrelPos = pfGunBarrel.transform.position;
-
-        Instantiate(pfBullets[1], barrelPos, Quaternion.identity);
-
-        homingBulletAmount -= 1;
-        txtHomingAmount.text = "x" + homingBulletAmount.ToString();
-
-        if (homingBulletAmount == 0) btnSpecialAkt1.interactable = false;
+        GamePlayManager.Instance.OnPlayerTakenDamage(dmgTaken);
     }
 
-    public void SpecialAttack2()
+    public void Move(float elapsedTime, Vector3 movingVector)
     {
-        Debug.Log("Btn 1 Cliked!");
-
-        Vector3 barrelPos = pfGunBarrel.transform.position;
-
-        Instantiate(pfBullets[2], barrelPos, Quaternion.identity);
-
-        buckshotBulletAmount -= 1;
-        txtBuckshotAmount.text = "x" + buckshotBulletAmount.ToString();
-
-        if (buckshotBulletAmount == 0) btnSpecialAkt2.interactable = false;
+        this.movingVector = movingVector;
+        base.Move(elapsedTime);
     }
 
-    public void Save()
+    public void InvokeSpecialAtk(int type)
     {
-        Data data = new Data();
-        data.score = this.score;
-
-        string jsonData = JsonUtility.ToJson(data);
-
-        PlayerPrefs.SetString("testSave", jsonData);
-
-        Debug.Log("Save!");
+        Vector3 barrelPos = this.pfGunBarrel.transform.position;
+        BulletManager.Instance.ShootBulletOfType(type, barrelPos);
     }
 
-    public void Load()
+    public void GameOver()
     {
-        string jsonData = PlayerPrefs.GetString("testSave");
-
-        Data data = JsonUtility.FromJson<Data>(jsonData);
-
-        Debug.Log("Hight score = " + data.score);
+        this.isPlaying = false;
     }
-
-    public virtual void OnColliedWithEnemy()
-    {
-        OnDamaged(1);
-    }
-
-    public override void OnDamaged(int dmg)
-    {
-        base.OnDamaged(dmg);
-
-        imgHealthBar.fillAmount = health / 10f;
-    }
-}
-
-[System.Serializable]
-public class Data //ko được kế thừa từ monobehavior
-{
-    //biến lưu phải là public
-    public int score;
 }

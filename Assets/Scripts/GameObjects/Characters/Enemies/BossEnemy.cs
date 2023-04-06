@@ -10,17 +10,17 @@ public class BossEnemy : BaseEnemy
     private bool isAttacking;
     private float cooldown;
 
-    [SerializeField] private GameObject pfAmmoType;
+    [SerializeField] private GameObject pfBullet;
     [SerializeField] private GameObject pfGunBarrel;
 
     // Update is called once per frame
     protected override void Update()
     {
-        float elapsedTime = GetElapsedTime();
+        float elapsedTime = Time.deltaTime;
 
         if (!isAttacking)
         {
-            OnAppearing(elapsedTime);
+            OnAppearing();
         }
         else
         {
@@ -34,24 +34,12 @@ public class BossEnemy : BaseEnemy
     {
         base.Init();
 
-        health = 10;
-        speed = 1f;
-        point = 5;
-        movingVector = new Vector3(x: 0f, y: -1f);
-        cooldown = atkInterval;
-        isAttacking = false;
-    }
-
-    public void OnAttacking(float elapsedTime)
-    {
-        // switch to viewport's (main camera) normalized coordinate
-        Vector3 worldPos = transform.position;
-        Vector3 viewportPos = viewport.WorldToViewportPoint(worldPos);
-
-        if (viewportPos.x > 0.9f) movingVector = new Vector3(x: -1f, y: 0f);
-        if (viewportPos.x < 0f) movingVector = new Vector3(x: 1f, y: 0f);
-
-        Attack(elapsedTime);
+        this.health = 10f;
+        this.speed = 1f;
+        this.point = 5;
+        this.movingVector = Vector3.down;
+        this.cooldown = atkInterval;
+        this.isAttacking = false;
     }
 
     public override void Attack(float elapsedTime)
@@ -65,7 +53,7 @@ public class BossEnemy : BaseEnemy
             Vector3 barrelPos = pfGunBarrel.transform.position;
 
             // shoot a bullet every 1s
-            var obj = Instantiate(pfAmmoType, barrelPos, Quaternion.identity);
+            var obj = Instantiate(pfBullet, barrelPos, Quaternion.identity);
 
             obj.GetComponent<BaseBullet>().SetMovingVector(new Vector3(x: 0f, y: -1f));
 
@@ -74,7 +62,14 @@ public class BossEnemy : BaseEnemy
         }
     }
 
-    public void OnAppearing(float elapsedTime)
+    public override void OnDefeated()
+    {
+        base.OnDefeated();
+
+        GamePlayManager.Instance.GameOver();
+    }
+
+    public void OnAppearing()
     {
         // switch to viewport's (main camera) normalized coordinate
         Vector3 worldPos = transform.position;
@@ -85,5 +80,17 @@ public class BossEnemy : BaseEnemy
             isAttacking = true;
             movingVector = new Vector3(x: 1f, y: 0f);
         }
+    }
+
+    public void OnAttacking(float elapsedTime)
+    {
+        // switch to viewport's (main camera) normalized coordinate
+        Vector3 worldPos = this.transform.position;
+        Vector3 viewportPos = this.viewport.WorldToViewportPoint(worldPos);
+
+        if (viewportPos.x > 0.9f) this.movingVector = new Vector3(x: -1f, y: 0f);
+        if (viewportPos.x < 0f) this.movingVector = new Vector3(x: 1f, y: 0f);
+
+        this.Attack(elapsedTime);
     }
 }

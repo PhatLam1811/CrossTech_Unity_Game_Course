@@ -11,7 +11,7 @@ public class Background : BaseGameObj
         base.Init();
 
         speed = 1f;
-        movingVector = new Vector3(x: 0f, y: -1f);
+        movingVector = Vector3.down;
     }
 
     public override void Move(float elapsedTime)

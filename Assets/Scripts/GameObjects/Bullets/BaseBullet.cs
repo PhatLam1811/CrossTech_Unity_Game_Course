@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class BaseBullet : BaseGameObj
 {
-    protected int damage;
-
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out BaseEnemy enemy))
         {
-            OnCollidedWithEnemy(enemy);
+            EnemyManager.Instance.OnCollidedWithBullet(enemy, this, this.damage);
+
+            // bullet disapear after hitting an enemy
+            Destroy(gameObject);
         }
     }
-
-    public int GetDamage() { return damage; }
 
     protected override void Init()
     {
@@ -41,19 +40,5 @@ public class BaseBullet : BaseGameObj
             // bullet disapear if out of camera view
             Destroy(gameObject);
         }
-    }
-
-    public virtual void OnCollidedWithEnemy(BaseEnemy enemy)
-    {
-        // score increase if enemy dies
-        if (enemy.GetHealth() <= damage)
-            GameObject.Find("Player")
-                .GetComponent<Player>()
-                .SetScore(enemy.GetPoint());
-
-        enemy.OnCollidedWithBullet(this);
-
-        // bullet disapear after hitting an enemy
-        Destroy(gameObject);
     }
 }

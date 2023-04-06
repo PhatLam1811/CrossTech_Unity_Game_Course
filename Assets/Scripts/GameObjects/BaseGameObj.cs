@@ -9,35 +9,41 @@ public class BaseGameObj : MonoBehaviour
     protected float speed;
     protected Vector3 movingVector;
 
+    protected float damage;
+
+    protected bool isPlaying = false;
+
     // Start is called before the first frame update
     protected void Start()
     {
-        Init();
+        this.Init();
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
-        float elapsedTime = GetElapsedTime();
+        float elapsedTime = Time.deltaTime;
 
-        Move(elapsedTime);
+        this.Move(elapsedTime);
     }
 
-    protected float GetElapsedTime() { return Time.deltaTime; }
-    public string GetClassName() { return GetType().Name; }
     public void SetMovingVector(Vector3 movingVector) { this.movingVector = movingVector; }
     public void SetSpeed(float speed) { this.speed = speed; }
+    public float GetDamageInflict() { return this.damage; }
 
     protected virtual void Init()
     {
-        viewport = Camera.main;
+        this.viewport = Camera.main;
 
-        speed = 0f;
-        movingVector = new Vector3(x: 0f, y: 0f);
+        this.movingVector = Vector3.zero;
+        this.speed = 0f;
+        this.damage = 1f;
+
+        this.isPlaying = true;
     }
 
     public virtual void Move(float elapsedTime)
     {
-        transform.position += movingVector * elapsedTime * speed;
+        this.transform.position += this.movingVector * elapsedTime * this.speed;
     }
 }
