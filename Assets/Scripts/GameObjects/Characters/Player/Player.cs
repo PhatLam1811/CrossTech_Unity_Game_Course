@@ -31,6 +31,8 @@ public class Player : BaseCharacter
         }
     }
 
+    // ==================================================
+
     protected override void Init()
     {
         base.Init();
@@ -60,6 +62,8 @@ public class Player : BaseCharacter
     {
         GamePlayManager.Instance.OnPlayerTakenDamage(dmgTaken);
     }
+
+    // ==================================================
 
     public void Move(float elapsedTime, Vector3 movingVector)
     {

@@ -10,20 +10,20 @@ public class Background : BaseGameObj
     {
         base.Init();
 
-        speed = 1f;
-        movingVector = Vector3.down;
+        this.speed = 1f;
+        this.movingVector = Vector3.down;
     }
 
     public override void Move(float elapsedTime)
     {
         // switch to viewport's (main camera) normalized coordinate
-        Vector3 worldCoord = transform.position;
-        Vector3 viewportCoord = viewport.WorldToViewportPoint(worldCoord);
+        Vector3 worldCoord = this.transform.position;
+        Vector3 viewportCoord = this.viewport.WorldToViewportPoint(worldCoord);
 
         if (viewportCoord.y < -0.5f)
         {
             // reload if out of camera view
-            Reload();
+            this.Reload();
         }
         else
         {
@@ -32,8 +32,13 @@ public class Background : BaseGameObj
         }
     }
 
-    void Reload()
+    public Vector3 GetReloadCoord()
     {
-        transform.position = reloadCoord.transform.position;
+        return this.reloadCoord.transform.position;
+    }
+
+    private void Reload()
+    {
+        this.transform.position = this.reloadCoord.transform.position;
     }
 }

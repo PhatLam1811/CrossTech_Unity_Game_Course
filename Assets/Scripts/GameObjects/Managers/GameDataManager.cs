@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class GameDataManager : MonoSingleton<GameDataManager>
 {
-    // private float autoSaveInterval = GameDefine.DEFAULT_AUTO_SAVE_INTERVAL;
-
     public PlayerData playerData;
 
     // Start is called before the first frame update
@@ -19,7 +17,7 @@ public class GameDataManager : MonoSingleton<GameDataManager>
     // Update is called once per frame
     void Update()
     {
-        // auto save every 30 secconds
+
     }
 
     public void OpenApp()

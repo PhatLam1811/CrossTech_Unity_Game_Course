@@ -5,8 +5,14 @@ using UnityEngine;
 
 public class GamePlayManager : MonoSingleton<GamePlayManager>
 {
-    [SerializeField] private GameObject player;
-    
+    [SerializeField] private GameObject pfBackground;
+    [SerializeField] private GameObject pfPlayer;
+
+    private GameObject background1;
+    private GameObject background2;
+
+    private GameObject player;
+
     private bool isPlaying = false;
 
     // Start is called before the first frame update
@@ -18,11 +24,11 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
     // Update is called once per frame
     void Update()
     {
+        this.ProcessInput(out Vector3 movingVector);
+
         if (this.isPlaying)
         {
             float elapsedTime = Time.deltaTime;
-
-            this.ProcessInput(out Vector3 movingVector);
 
             this.player.GetComponent<Player>().Move(elapsedTime, movingVector);
         }
@@ -30,12 +36,18 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
 
     public void StartGame()
     {
-        this.player = Instantiate(this.player, PlayerData.Instance.position, Quaternion.identity);
+        // backgrounds
+        this.background1 = Instantiate(this.pfBackground, Vector3.zero, Quaternion.identity);
+        Vector3 bg2InitCoord = this.background1.GetComponent<Background>().GetReloadCoord();
+        
+        this.background2 = Instantiate(this.pfBackground, bg2InitCoord / 2, Quaternion.identity);
 
+        // player
+        this.player = Instantiate(this.pfPlayer, PlayerData.Instance.position, Quaternion.identity);
+
+        // others
         EnemyManager.Instance.StartGame();
         BulletManager.Instance.StartGame();
-
-        Debug.Log(this.GetType().Name + " " + PlayerData.Instance.health);
 
         GameUIManager.Instance.StartGame(
             PlayerData.Instance.health,
@@ -122,8 +134,6 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
     {
         GameDataManager.Instance.UpdatePlayerHighScore();
         GameDataManager.Instance.ResetPlayerData();
-
-        Debug.Log(this.GetType().Name + " " + PlayerData.Instance.health);
 
         EnemyManager.Instance.GameOver();
         BulletManager.Instance.GameOver();
