@@ -33,6 +33,7 @@ public class EnemyManager : MonoSingleton<EnemyManager>
 
     public void StartGame()
     {
+        GamePlayManager.Instance.onGameOverCallback += this.GameOver;
         this.isGameOver = false;
     }
 

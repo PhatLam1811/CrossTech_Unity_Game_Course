@@ -13,9 +13,9 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
 
     private GameObject player;
 
-    private List<BaseGameObj> gameObjs;
-
     private bool isGameOver;
+    public delegate void GameOverCallback();
+    public event GameOverCallback onGameOverCallback;
 
     // Start is called before the first frame update
     void Start()
@@ -47,18 +47,18 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
         // player
         this.player = Instantiate(this.pfPlayer, Vector3.zero, Quaternion.identity);
 
-        this.gameObjs = new List<BaseGameObj>();
-
         // others
         EnemyManager.Instance.StartGame();
         BulletManager.Instance.StartGame();
-
         GameUIManager.Instance.StartGame(
             PlayerData.Instance.health,
             PlayerData.Instance.score,
             PlayerData.Instance.spBullet1Amt,
             PlayerData.Instance.spBullet2Amt);
 
+        // Add callback on game over for GameDataManager & GameManager
+        this.onGameOverCallback += GameDataManager.Instance.GameOver;
+        this.onGameOverCallback += GameManager.Instance.GameOver;
         this.isGameOver = false;
     }
 
@@ -90,16 +90,6 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
     public int GetPlayerCurrentBullet()
     {
         return PlayerData.Instance.currentBullet;
-    }
-
-    public void LoadGameObjs(BaseGameObj obj)
-    {
-        this.gameObjs.Add(obj);
-    }
-
-    public void UnloadGameObjs(BaseGameObj obj)
-    {
-        this.gameObjs.Remove(obj);
     }
 
     // ==================================================
@@ -151,26 +141,10 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
 
     public void GameOver()
     {
-        // save score & reset player data
-        GameDataManager.Instance.UpdatePlayerHighScore();
-        GameDataManager.Instance.ResetPlayerData();
-
-        GameManager.Instance.OnShowDialog<HighscoreDialog>("UI Elements/Highscore Dialog", data: PlayerData.Instance.highScores);
-
-        // invoke GameOver() for all game objs
-        EnemyManager.Instance.GameOver();
-        BulletManager.Instance.GameOver();
-        GameUIManager.Instance.GameOver();
-
-        this.background1.GetComponent<Background>().GameOver();
-        this.player.GetComponent<Player>().GameOver();
-
-        foreach (BaseGameObj gameObj in this.gameObjs)
-        {
-            gameObj.GameOver();
-        }
-
         this.isGameOver = true;
+
+        // invoke GameOver() for all game objects
+        this.onGameOverCallback?.Invoke();
 
         Debug.Log("Game Over!!!");
     }

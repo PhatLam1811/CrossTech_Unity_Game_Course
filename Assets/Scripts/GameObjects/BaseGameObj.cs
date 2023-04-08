@@ -42,7 +42,8 @@ public class BaseGameObj : MonoBehaviour
         this.speed = 0f;
         this.damage = 1f;
 
-        GamePlayManager.Instance.LoadGameObjs(this);
+        GamePlayManager.Instance.onGameOverCallback += this.GameOver;
+        // GamePlayManager.Instance.LoadGameObjs(this);
         this.isGameOver = false;
     }
 

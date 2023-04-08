@@ -9,7 +9,7 @@ public class ExplodedBuckshot : BaseBullet
         viewport = Camera.main;
         damage = 1;
 
-        GamePlayManager.Instance.LoadGameObjs(this);
+        GamePlayManager.Instance.onGameOverCallback += this.GameOver;
         this.isGameOver = false;
     }
 }

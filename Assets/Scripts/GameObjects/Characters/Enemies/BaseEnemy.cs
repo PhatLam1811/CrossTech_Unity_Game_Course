@@ -53,8 +53,6 @@ public class BaseEnemy : BaseCharacter
     {
         GamePlayManager.Instance.OnDefeatEnemy(this.point);
 
-        GamePlayManager.Instance.UnloadGameObjs(this);
-
         Destroy(this.gameObject);
     }
 }

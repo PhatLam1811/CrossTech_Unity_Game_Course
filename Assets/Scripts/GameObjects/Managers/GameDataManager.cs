@@ -128,4 +128,10 @@ public class GameDataManager : MonoSingleton<GameDataManager>
 
         this.SavePlayerData();
     }
+
+    public void GameOver()
+    {
+        this.UpdatePlayerHighScore();
+        this.ResetPlayerData();
+    }
 }

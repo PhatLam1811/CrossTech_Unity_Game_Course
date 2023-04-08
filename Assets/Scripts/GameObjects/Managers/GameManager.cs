@@ -7,6 +7,8 @@ public class GameManager : MonoSingleton<GameManager>
 {
     [SerializeField] private Transform _dialogPosition;
 
+    private const string HIGHSCORE_DIALOG_PATH = "UI Elements/Highscore Dialog";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,11 @@ public class GameManager : MonoSingleton<GameManager>
     public void OpenApp()
     {
         GameDataManager.Instance.OpenApp();
+    }
+
+    public void GameOver()
+    {
+        this.OnShowDialog<HighscoreDialog>(HIGHSCORE_DIALOG_PATH, data: PlayerData.Instance.highScores);
     }
 
     public void OnShowDialog<T>(string path, object data = null, UnityEngine.Events.UnityAction callbackCompleteShow = null) where T : BaseDialog

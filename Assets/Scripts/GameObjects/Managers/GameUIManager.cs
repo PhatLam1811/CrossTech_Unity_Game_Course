@@ -35,7 +35,8 @@ public class GameUIManager : MonoSingleton<GameUIManager>
         this.txtSpBulletAmt2.text = "x" + spBullet2Amt.ToString();
         this.btnSpAkt1.interactable = spBullet1Amt > 0;
         this.btnSpAkt2.interactable = spBullet2Amt > 0;
-        
+
+        GamePlayManager.Instance.onGameOverCallback += this.GameOver;
         this.isGameOver = false;
     }
 
