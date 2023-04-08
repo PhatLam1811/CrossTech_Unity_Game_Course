@@ -13,7 +13,7 @@ public class Player : BaseCharacter
     // Update is called once per frame
     protected override void Update()
     {
-        if (this.isPlaying)
+        if (!this.isGameOver)
         {
             float elapsedTime = Time.deltaTime;
 
@@ -75,10 +75,5 @@ public class Player : BaseCharacter
     {
         Vector3 barrelPos = this.pfGunBarrel.transform.position;
         BulletManager.Instance.ShootBulletOfType(type, barrelPos);
-    }
-
-    public void GameOver()
-    {
-        this.isPlaying = false;
     }
 }

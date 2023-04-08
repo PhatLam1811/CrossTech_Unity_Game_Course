@@ -14,13 +14,16 @@ public class BuckshotBullet : BaseBullet
     // Update is called once per frame
     protected override void Update()
     {
-        float elapsedTime = Time.deltaTime;
+        if (!this.isGameOver)
+        {
+            float elapsedTime = Time.deltaTime;
 
-        if (!isExploded) countdown -= elapsedTime;
+            if (!isExploded) countdown -= elapsedTime;
 
-        if (countdown <= 0f && !isExploded) Explode();
+            if (countdown <= 0f && !isExploded) Explode();
 
-        base.Move(elapsedTime);
+            base.Move(elapsedTime);
+        }
     }
 
     protected override void Init()

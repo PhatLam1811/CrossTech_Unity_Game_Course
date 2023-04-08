@@ -11,7 +11,7 @@ public class BaseGameObj : MonoBehaviour
 
     protected float damage;
 
-    protected bool isPlaying = false;
+    protected bool isGameOver;
 
     // Start is called before the first frame update
     protected void Start()
@@ -22,9 +22,12 @@ public class BaseGameObj : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
-        float elapsedTime = Time.deltaTime;
+        if (!isGameOver)
+        {
+            float elapsedTime = Time.deltaTime;
 
-        this.Move(elapsedTime);
+            this.Move(elapsedTime);
+        }
     }
 
     public void SetMovingVector(Vector3 movingVector) { this.movingVector = movingVector; }
@@ -39,11 +42,17 @@ public class BaseGameObj : MonoBehaviour
         this.speed = 0f;
         this.damage = 1f;
 
-        this.isPlaying = true;
+        GamePlayManager.Instance.LoadGameObjs(this);
+        this.isGameOver = false;
     }
 
     public virtual void Move(float elapsedTime)
     {
         this.transform.position += this.movingVector * elapsedTime * this.speed;
+    }
+
+    public void GameOver()
+    {
+        this.isGameOver = true;
     }
 }

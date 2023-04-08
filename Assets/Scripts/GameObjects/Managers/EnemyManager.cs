@@ -6,7 +6,7 @@ public class EnemyManager : MonoSingleton<EnemyManager>
 {
     [SerializeField] private List<GameObject> pfEnemies;
 
-    private bool isPlaying = false;
+    private bool isGameOver;
 
     private bool isBossAppeared;
     private float baseEnemyCD;
@@ -23,7 +23,7 @@ public class EnemyManager : MonoSingleton<EnemyManager>
     // Update is called once per frame
     void Update()
     {
-        if (this.isPlaying)
+        if (!this.isGameOver)
         {
             float elapsedTime = Time.deltaTime;
 
@@ -33,7 +33,7 @@ public class EnemyManager : MonoSingleton<EnemyManager>
 
     public void StartGame()
     {
-        this.isPlaying = true;
+        this.isGameOver = false;
     }
 
     private void Init()
@@ -42,6 +42,7 @@ public class EnemyManager : MonoSingleton<EnemyManager>
         this.isBossAppeared = false;
         this.baseEnemyCD = GameDefine.BASE_ENEMY_SPAWN_INTERVAL;
         this.untilBossCount = 15; // boss appear after the 15th base enemy
+        this.isGameOver = false;
     }
 
     // ==================================================
@@ -65,7 +66,6 @@ public class EnemyManager : MonoSingleton<EnemyManager>
                 if (!this.isBossAppeared)
                 {
                     this.SpawnBoss();
-
                     this.isBossAppeared = true;
                 }
             }
@@ -121,6 +121,6 @@ public class EnemyManager : MonoSingleton<EnemyManager>
 
     public void GameOver()
     {
-        this.isPlaying = false;
+        this.isGameOver = true;
     }
 }

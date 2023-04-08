@@ -11,9 +11,11 @@ public class HomingBullet : BaseBullet
     // Update is called once per frame
     protected override void Update()
     {
-        base.Update();
-
-        if (target) Homing();
+        if (!this.isGameOver)
+        {
+            base.Update();
+            if (target) Homing();
+        }
     }
 
     protected override void Init()

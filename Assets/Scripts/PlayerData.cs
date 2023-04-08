@@ -1,12 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System;
 
-[System.Serializable]
+[Serializable]
 public class PlayerData
 {
-    public Vector3 position;
-
     public float health;
     public int currentBullet;
 
@@ -17,7 +14,7 @@ public class PlayerData
     public int spBullet2Amt;
 
     public int score;               // current score
-    public List<int> highScores;    // overall high scores
+    public List<Score> highScores;    // overall high scores
 
     public static PlayerData Instance => GameDataManager.Instance.playerData;
 
@@ -25,13 +22,11 @@ public class PlayerData
     {
         this.SetDefaultPlayerData();
 
-        this.highScores = new List<int>();
+        this.highScores = new List<Score>();
     }
 
     public void SetDefaultPlayerData()
     {
-        this.position = Vector3.zero;
-
         this.health = GameDefine.DEFAULT_PLAYER_HP;
         this.currentBullet = GameDefine.DEFAULT_BULLET_TYPE;
 
@@ -43,4 +38,11 @@ public class PlayerData
 
         this.score = GameDefine.DEFAULT_PLAYER_SCORE;
     }
+}
+
+[Serializable]
+public class Score
+{
+    public int score;
+    public long ticks;
 }

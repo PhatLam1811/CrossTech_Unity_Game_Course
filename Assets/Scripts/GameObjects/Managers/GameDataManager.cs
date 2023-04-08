@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class GameDataManager : MonoSingleton<GameDataManager>
@@ -97,12 +94,6 @@ public class GameDataManager : MonoSingleton<GameDataManager>
 
     // ==================================================
 
-    public void UpdatePlayerPosition(Vector3 position)
-    {
-        this.playerData.position = position;
-        SavePlayerData();
-    }
-
     public void UpdatePlayerHP(float dmgTaken)
     {
         this.playerData.health -= dmgTaken;
@@ -115,24 +106,25 @@ public class GameDataManager : MonoSingleton<GameDataManager>
         this.SavePlayerData();
     }
 
-    public void UpdatePlayerSpBullet1Amt(int remainingAmt)
+    public void UpdatePlayerSpBullet1Amt(int remainingAmount)
     {
-        this.playerData.spBullet1Amt = remainingAmt;
+        this.playerData.spBullet1Amt = remainingAmount;
         this.SavePlayerData();
     }
 
-    public void UpdatePlayerSpBullet2Amt(int remainingAmt)
+    public void UpdatePlayerSpBullet2Amt(int remainingAmount)
     {
-        this.playerData.spBullet2Amt = remainingAmt;
+        this.playerData.spBullet2Amt = remainingAmount;
         this.SavePlayerData();
     }
 
     public void UpdatePlayerHighScore()
     {
-        int thisTurnScore = this.playerData.score;
+        Score currentRun = new Score();
+        currentRun.score = this.playerData.score;
+        currentRun.ticks = DateTime.Now.Ticks;
 
-        this.playerData.highScores.Add(thisTurnScore);
-        this.playerData.highScores = this.playerData.highScores.OrderByDescending(i => i).ToList();
+        this.playerData.highScores.Add(currentRun);
 
         this.SavePlayerData();
     }

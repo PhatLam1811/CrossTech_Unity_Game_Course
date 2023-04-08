@@ -7,21 +7,21 @@ public class BulletManager : MonoSingleton<BulletManager>
 {
     [SerializeField] private List<GameObject> pfBullets;
 
-    private bool isPlaying = false;
+    private bool isGameOver;
 
     public void StartGame()
     {
-        this.isPlaying = true;
+        this.isGameOver = false;
     }
 
     public void GameOver()
     {
-        this.isPlaying = false;
+        this.isGameOver = true;
     }
 
     public void ShootBulletOfType(int type, Vector3 pos)
     {
-        if (isPlaying)
+        if (!this.isGameOver)
         {
             Instantiate(pfBullets[type], pos, Quaternion.identity);
         }

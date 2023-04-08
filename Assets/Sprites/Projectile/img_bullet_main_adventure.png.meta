@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: img_bullet_main_adventure_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 312
+        width: 74
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda8322434416e447a250fb8200f36bc
+      internalID: -1321211466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_main_adventure_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 346
+        width: 53
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cda439d24aa20408c85d37d053d5b7
+      internalID: 438826892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_main_adventure_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 346
+        width: 53
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e58d4ba6393dc34dba9381f43fc3e92
+      internalID: 1131714091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_main_adventure_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 107
+        width: 57
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa9693a5fb985c4e8a741dddd446a7f
+      internalID: -317261120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_main_adventure_4
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 123
+        width: 32
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75efe29217388434db466ff8c7b39ebc
+      internalID: 38577759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_bullet_main_adventure_5
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 13
+        width: 21
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be65975c01566b4394b3203069ec539
+      internalID: 1843705253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +240,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      img_bullet_main_adventure_0: -1321211466
+      img_bullet_main_adventure_1: 438826892
+      img_bullet_main_adventure_2: 1131714091
+      img_bullet_main_adventure_3: -317261120
+      img_bullet_main_adventure_4: 38577759
+      img_bullet_main_adventure_5: 1843705253
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

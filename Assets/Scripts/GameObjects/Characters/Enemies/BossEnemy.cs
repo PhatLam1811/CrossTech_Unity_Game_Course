@@ -16,18 +16,21 @@ public class BossEnemy : BaseEnemy
     // Update is called once per frame
     protected override void Update()
     {
-        float elapsedTime = Time.deltaTime;
-
-        if (!isAttacking)
+        if (!this.isGameOver)
         {
-            OnAppearing();
-        }
-        else
-        {
-            OnAttacking(elapsedTime);
-        }
+            float elapsedTime = Time.deltaTime;
 
-        base.Move(elapsedTime);
+            if (!isAttacking)
+            {
+                OnAppearing();
+            }
+            else
+            {
+                OnAttacking(elapsedTime);
+            }
+
+            base.Move(elapsedTime);
+        }
     }
 
     protected override void Init()

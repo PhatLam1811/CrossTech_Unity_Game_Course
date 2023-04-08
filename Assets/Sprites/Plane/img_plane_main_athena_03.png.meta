@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: img_plane_main_athena_03_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 375
+        width: 151
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e6055ad4259eb4fa57f83bbc4a04cd
+      internalID: 1756758013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_athena_03_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 378
+        width: 209
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681903e43ca56594f9cc26b75dd4c9da
+      internalID: 806923755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_athena_03_2
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 376
+        width: 126
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac73804778b11b4ca662cb30984a4a8
+      internalID: -1426508740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_athena_03_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 237
+        width: 151
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29019e2a068583c408742874a6ce4aec
+      internalID: -948392592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_athena_03_4
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 241
+        width: 197
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0de96ee86cf604ba51abd023927447
+      internalID: 1929765548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_athena_03_5
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 236
+        width: 133
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b573d622b30be5c4ea5e3afb6b4e14d2
+      internalID: -1656198268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_athena_03_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 98
+        width: 122
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f0229e4daa1fe4b9f0ae78c0952caf
+      internalID: 1548233639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_athena_03_7
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 231
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bec7b61cf2ccd40bc60f5022c22af1
+      internalID: 76744472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_athena_03_8
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 86
+        width: 128
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb9772f4606d5f4b9d672a6d7aedd31
+      internalID: -1383593875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_athena_03_9
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 60
+        width: 116
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d942ae9afd8fd742a05d118efacb107
+      internalID: -1905864435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_athena_03_10
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 59
+        width: 122
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83f3d93c26c4dc44921fc2b4d3fdb27
+      internalID: 1921079455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +345,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      img_plane_main_athena_03_0: 1756758013
+      img_plane_main_athena_03_1: 806923755
+      img_plane_main_athena_03_10: 1921079455
+      img_plane_main_athena_03_2: -1426508740
+      img_plane_main_athena_03_3: -948392592
+      img_plane_main_athena_03_4: 1929765548
+      img_plane_main_athena_03_5: -1656198268
+      img_plane_main_athena_03_6: 1548233639
+      img_plane_main_athena_03_7: 76744472
+      img_plane_main_athena_03_8: -1383593875
+      img_plane_main_athena_03_9: -1905864435
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

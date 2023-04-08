@@ -8,5 +8,8 @@ public class ExplodedBuckshot : BaseBullet
     { 
         viewport = Camera.main;
         damage = 1;
+
+        GamePlayManager.Instance.LoadGameObjs(this);
+        this.isGameOver = false;
     }
 }

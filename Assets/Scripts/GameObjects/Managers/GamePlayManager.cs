@@ -13,7 +13,9 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
 
     private GameObject player;
 
-    private bool isPlaying = false;
+    private List<BaseGameObj> gameObjs;
+
+    private bool isGameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,7 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
     {
         this.ProcessInput(out Vector3 movingVector);
 
-        if (this.isPlaying)
+        if (!this.isGameOver)
         {
             float elapsedTime = Time.deltaTime;
 
@@ -43,7 +45,9 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
         this.background2 = Instantiate(this.pfBackground, bg2InitCoord / 2, Quaternion.identity);
 
         // player
-        this.player = Instantiate(this.pfPlayer, PlayerData.Instance.position, Quaternion.identity);
+        this.player = Instantiate(this.pfPlayer, Vector3.zero, Quaternion.identity);
+
+        this.gameObjs = new List<BaseGameObj>();
 
         // others
         EnemyManager.Instance.StartGame();
@@ -55,7 +59,7 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
             PlayerData.Instance.spBullet1Amt,
             PlayerData.Instance.spBullet2Amt);
 
-        this.isPlaying = true;
+        this.isGameOver = false;
     }
 
     // ==================================================
@@ -70,17 +74,32 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Debug.Log("Clear all data!!!!");
-
-            GameDataManager.Instance.ClearAllPlayerData();
-
-            this.GameOver();
+            this.ClearAllGameData();
         }
+    }
+
+    private void ClearAllGameData()
+    {
+        Debug.Log("Clear all data!!!!");
+
+        GameDataManager.Instance.ClearAllPlayerData();
+
+        this.GameOver();
     }
 
     public int GetPlayerCurrentBullet()
     {
         return PlayerData.Instance.currentBullet;
+    }
+
+    public void LoadGameObjs(BaseGameObj obj)
+    {
+        this.gameObjs.Add(obj);
+    }
+
+    public void UnloadGameObjs(BaseGameObj obj)
+    {
+        this.gameObjs.Remove(obj);
     }
 
     // ==================================================
@@ -132,22 +151,27 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
 
     public void GameOver()
     {
+        // save score & reset player data
         GameDataManager.Instance.UpdatePlayerHighScore();
         GameDataManager.Instance.ResetPlayerData();
 
+        GameManager.Instance.OnShowDialog<HighscoreDialog>("UI Elements/Highscore Dialog", data: PlayerData.Instance.highScores);
+
+        // invoke GameOver() for all game objs
         EnemyManager.Instance.GameOver();
         BulletManager.Instance.GameOver();
+        GameUIManager.Instance.GameOver();
+
+        this.background1.GetComponent<Background>().GameOver();
         this.player.GetComponent<Player>().GameOver();
 
-        this.isPlaying = false;
-
-        int count = 0;
-
-        Debug.Log("Game Over!!! Here are your results!!!");
-
-        foreach (int score in PlayerData.Instance.highScores)
+        foreach (BaseGameObj gameObj in this.gameObjs)
         {
-            Debug.Log(String.Format("{0}: {1}", ++count, score));
+            gameObj.GameOver();
         }
+
+        this.isGameOver = true;
+
+        Debug.Log("Game Over!!!");
     }
 }
