@@ -1,14 +1,11 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    private const string HIGHSCORE_DIALOG_PATH = "UI Elements/Highscore Dialog";
-    private const string START_DIALOG_PATH = "UI Elements/Start Dialog";
+    [SerializeField] private Transform dialogPosition;
 
-    [SerializeField] private Transform _dialogPos;
+    private Dictionary<int, EnemyConfig> enemyConfigs;
 
     void Start()
     {
@@ -17,24 +14,57 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void OpenApp()
     {
-        this.OnShowDialog<StartDialog>(START_DIALOG_PATH);
+        this.OnShowDialog<StartDialog>(GameDefine.START_DIALOG_PATH);
     }
 
     // ==================================================
 
     public void StartGame()
     {
+        this.LoadEnemyConfigs();
         GameDataManager.Instance.StartGame();
     }
 
     public void GameOver()
     {
-        this.OnShowDialog<HighscoreDialog>(HIGHSCORE_DIALOG_PATH, data: PlayerData.Instance.highScores);
+        this.OnShowDialog<HighscoreDialog>(GameDefine.HIGHSCORE_DIALOG_PATH, data: PlayerData.Instance.highScores);
     }
 
     public void ReplayGame()
     {
         GamePlayManager.Instance.ReplayGame();
+    }
+
+    // ==================================================
+
+    private void LoadEnemyConfigs()
+    {
+        this.enemyConfigs = new Dictionary<int, EnemyConfig>();
+
+        if (EnemyConfigs.Instance.Enemies != null)
+        {
+            foreach (EnemyConfig config in EnemyConfigs.Instance.Enemies)
+            {
+                this.enemyConfigs[config.TypeId] = config;
+            }
+        }
+        else
+        {
+            // this shouldn't happen
+            Debug.LogError("Null enemy configs!!!");
+        }
+    }
+
+    public EnemyConfig GetEnemyConfigOfType(int enemyTypeId)
+    {
+        if (this.enemyConfigs[enemyTypeId] != null)
+        {
+            return this.enemyConfigs[enemyTypeId];
+        }
+        else
+        {
+            Debug.LogError("Unknown enemy type!!!! - type : " + enemyTypeId); return null;
+        }
     }
 
     // ==================================================
@@ -45,8 +75,8 @@ public class GameManager : MonoSingleton<GameManager>
 
         if (dialogPrefab != null)
         {
-            T dialogComponent = (Instantiate(dialogPrefab, _dialogPos)).GetComponent<T>();
-            
+            T dialogComponent = (Instantiate(dialogPrefab, dialogPosition)).GetComponent<T>();
+
             if (dialogComponent != null)
             {
                 dialogComponent.OnShow(data, callbackCompleteShow);

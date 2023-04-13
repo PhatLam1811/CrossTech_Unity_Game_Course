@@ -1,32 +1,30 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossEnemy : BaseEnemy
 {
-    private const float atkInterval = 1.5f;
-
-    private bool isAttacking;
-    private float cooldown;
-
     [SerializeField] private GameObject pfBullet;
     [SerializeField] private GameObject pfGunBarrel;
 
-    // Update is called once per frame
+    private bool isAttacking;
+
+    private float atkCooldown;
+    private float atkInterval;
+
+    private int bulletId;
+
     protected override void Update()
     {
         if (!this.isGameOver)
         {
             float elapsedTime = Time.deltaTime;
 
-            if (!isAttacking)
+            if (!this.isAttacking)
             {
-                OnAppearing();
+                this.OnAppearing();
             }
             else
             {
-                OnAttacking(elapsedTime);
+                this.OnAttacking(elapsedTime);
             }
 
             base.Move(elapsedTime);
@@ -36,24 +34,27 @@ public class BossEnemy : BaseEnemy
     protected override void Init()
     {
         base.Init();
-
-        this.health = 20f;
-        this.speed = 1f;
-        this.point = 500;
-        this.movingVector = Vector3.down;
-        this.cooldown = atkInterval;
         this.isAttacking = false;
+    }
+
+    protected override void LoadConfig()
+    {
+        EnemyConfig config = EnemyManager.Instance.GetConfigOfType(GameDefine.BOSS_ENEMY_ID);
+
+        this.health = config.Health;
+        this.speed = config.Speed;
+        this.point = config.Point;
+        this.atkCooldown = config.Cooldown;
+        this.bulletId = config.BulletId;
     }
 
     public override void Attack(float elapsedTime)
     {
-        cooldown -= elapsedTime;
+        this.atkInterval -= elapsedTime;
 
-        if (cooldown <= 0.0f)
+        if (this.atkInterval <= 0.0f)
         {
-            // Debug.Log(GetTypeName() + " shooting");
-
-            Vector3 barrelPos = pfGunBarrel.transform.position;
+            Vector3 barrelPos = this.pfGunBarrel.transform.position;
 
             // shoot a bullet every 1s
             var obj = Instantiate(pfBullet, barrelPos, Quaternion.identity);
@@ -61,27 +62,27 @@ public class BossEnemy : BaseEnemy
             obj.GetComponent<BaseBullet>().SetMovingVector(new Vector3(x: 0f, y: -1f));
 
             // reset cooldown
-            cooldown = atkInterval;
+            this.atkInterval = this.atkCooldown;
         }
     }
 
     public override void OnDefeated()
     {
         base.OnDefeated();
-
         GamePlayManager.Instance.GameOver();
     }
 
     public void OnAppearing()
     {
         // switch to viewport's (main camera) normalized coordinate
-        Vector3 worldPos = transform.position;
-        Vector3 viewportPos = viewport.WorldToViewportPoint(worldPos);
+        Vector3 worldPos = this.transform.position;
+        Vector3 viewportPos = this.viewport.WorldToViewportPoint(worldPos);
 
         if (viewportPos.y <= 0.8f)
         {
-            isAttacking = true;
-            movingVector = new Vector3(x: 1f, y: 0f);
+            this.isAttacking = true;
+            this.atkInterval = this.atkCooldown;
+            this.movingVector = Vector3.right;
         }
     }
 

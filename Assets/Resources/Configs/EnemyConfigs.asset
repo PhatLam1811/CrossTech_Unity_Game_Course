@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68967d668ef94242a6b3fb76736e50b, type: 3}
   m_Name: EnemyConfigs
   m_EditorClassIdentifier: 
-  enemyConfigs:
-  - enemyTypeId: 0
-    health: 0
-    speed: 0
-    point: 0
+  enemies:
+  - typeId: 0
+    health: 5
+    speed: 3
+    point: 20
     cooldown: 0
     bulletId: 0
+  - typeId: 1
+    health: 20
+    speed: 1
+    point: 100
+    cooldown: 1
+    bulletId: 3

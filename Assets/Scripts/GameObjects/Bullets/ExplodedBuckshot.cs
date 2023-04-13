@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ExplodedBuckshot : BaseBullet
 {
-    protected override void Init() 
-    { 
+    protected override void Init()
+    {
         this.viewport = Camera.main;
         this.damage = 1;
 

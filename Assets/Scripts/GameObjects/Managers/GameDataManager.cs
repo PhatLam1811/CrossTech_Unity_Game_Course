@@ -69,15 +69,15 @@ public class GameDataManager : MonoSingleton<GameDataManager>
     {
         PlayerConfig playerConfig = PlayerConfig.Instance;
 
-        this.playerData.health = playerConfig.health;
+        this.playerData.health = playerConfig.Health;
 
-        this.playerData.currentBulletId = playerConfig.defaultBulletId;
+        this.playerData.currentBulletId = playerConfig.DefaultBulletId;
 
-        this.playerData.specialBullet1Id = playerConfig.specialBullet1Id;
-        this.playerData.specialBullet2Id = playerConfig.specialBullet2Id;
+        this.playerData.specialBullet1Id = playerConfig.SpecialBullet1Id;
+        this.playerData.specialBullet2Id = playerConfig.SpecialBullet2Id;
 
-        this.playerData.specialBullet1Amount = playerConfig.specialBullet1InitAmount;
-        this.playerData.specialBullet2Amount = playerConfig.specialBullet2InitAmount;
+        this.playerData.specialBullet1Amount = playerConfig.SpecialBullet1InitAmount;
+        this.playerData.specialBullet2Amount = playerConfig.SpecialBullet2InitAmount;
 
         this.playerData.score = 0;
     }

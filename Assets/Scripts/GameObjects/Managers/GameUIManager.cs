@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class GameUIManager : MonoSingleton<GameUIManager>
 {
+    private const float TEMP_DEFAULT_PLAYER_HP = 10f;
+
     [SerializeField] private Image imgHealthBar;
     [SerializeField] private Image imgHealth;
     [SerializeField] private Button btnSpAkt1;
@@ -24,7 +24,7 @@ public class GameUIManager : MonoSingleton<GameUIManager>
 
     public void StartGame(float health, int score, int spBullet1Amt, int spBullet2Amt)
     {
-        this.imgHealth.fillAmount = health / GameDefine.DEFAULT_PLAYER_HP;
+        this.imgHealth.fillAmount = health / TEMP_DEFAULT_PLAYER_HP;
         this.txtScore.text = score.ToString();
         this.txtSpBulletAmt1.text = "x" + spBullet1Amt.ToString();
         this.txtSpBulletAmt2.text = "x" + spBullet2Amt.ToString();
@@ -60,8 +60,8 @@ public class GameUIManager : MonoSingleton<GameUIManager>
     public void OnPlayerHealthChange(float currentHealth)
     {
         if (this.isGameOver) return;
-        
-        this.imgHealth.fillAmount = currentHealth / GameDefine.DEFAULT_PLAYER_HP;
+
+        this.imgHealth.fillAmount = currentHealth / TEMP_DEFAULT_PLAYER_HP;
     }
 
     public void OnPlayerScoreChange(int newScore)

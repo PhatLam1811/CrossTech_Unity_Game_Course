@@ -1,8 +1,7 @@
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
 using TMPro;
-using UnityEngine.Events;
+using UnityEngine;
 
 public class HighscoreDialog : BaseDialog
 {
@@ -29,7 +28,7 @@ public class HighscoreDialog : BaseDialog
                     int playerScore = descHighscores[i].score;
                     string date = new System.DateTime(descHighscores[i].ticks).ToString("dd/MM/yyyy");
 
-                    TextMeshProUGUI scoreText = Instantiate(_prefabText,_pfPanelScore);
+                    TextMeshProUGUI scoreText = Instantiate(_prefabText, _pfPanelScore);
                     scoreText.SetText($"{rank + ": " + playerScore + " - " + date}");
                 }
             }

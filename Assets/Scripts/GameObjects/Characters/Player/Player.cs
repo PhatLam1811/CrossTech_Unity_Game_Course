@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : BaseCharacter
 {
-    [SerializeField] private GameObject pfGunBarrel;
+    [SerializeField] private Transform tfGunBarrel;
 
     private float atkCooldown;
     private float atkInterval;
@@ -20,8 +18,8 @@ public class Player : BaseCharacter
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision) 
-    { 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.TryGetComponent(out BaseEnemy enemy))
         {
             EnemyManager.Instance.OnCollidedWithPlayer(enemy, this, damage);
@@ -48,7 +46,7 @@ public class Player : BaseCharacter
         // shoot a bullet after cooldown
         if (this.atkInterval <= 0.0f)
         {
-            Vector3 barrelPos = this.pfGunBarrel.transform.position;
+            Vector3 barrelPos = this.tfGunBarrel.position;
             int currentBullet = GamePlayManager.Instance.GetPlayerCurrentBullet();
 
             BulletManager.Instance.ShootBulletOfType(currentBullet, barrelPos);
@@ -65,12 +63,12 @@ public class Player : BaseCharacter
 
     // ==================================================
 
-    private void LoadConfig()
+    protected override void LoadConfig()
     {
         PlayerConfig config = PlayerConfig.Instance;
 
-        this.speed = config.speed;
-        this.atkCooldown = config.cooldown;
+        this.speed = config.Speed;
+        this.atkCooldown = config.Cooldown;
     }
 
     public void Move(float elapsedTime, Vector3 movingVector)
@@ -81,7 +79,7 @@ public class Player : BaseCharacter
 
     public void InvokeSpecialAtk(int type)
     {
-        Vector3 barrelPos = this.pfGunBarrel.transform.position;
+        Vector3 barrelPos = this.tfGunBarrel.transform.position;
         BulletManager.Instance.ShootBulletOfType(type, barrelPos);
     }
 }

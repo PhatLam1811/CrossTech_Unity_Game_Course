@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class BaseCharacter : BaseGameObj
 {
+    protected virtual void LoadConfig() { }
+
     public virtual void Attack(float elapsedTime) { }
 
     public virtual void OnTakenDamage(float dmgTaken) { }

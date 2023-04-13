@@ -48,8 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6cf872359d9b864788405655c033bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfGunBarrel: {fileID: 2660683303897988030}
-  playerConfigs: {fileID: 11400000, guid: ad2a47fd6f720c74db04a9c11b27cca2, type: 2}
+  tfGunBarrel: {fileID: 2660683303897988025}
 --- !u!212 &2660683303510860042
 SpriteRenderer:
   m_ObjectHideFlags: 0

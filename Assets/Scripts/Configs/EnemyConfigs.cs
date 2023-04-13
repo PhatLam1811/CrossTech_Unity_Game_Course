@@ -1,12 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Games/EnemyConfigs", fileName = "EnemyConfigs")]
 public class EnemyConfigs : ScriptableObject
 {
-    private const string ENEMY_CONFIGS_FILE_PATH = "Configs/EnemyConfigs";
-
     #region Singleton
     private static EnemyConfigs _instance;
 
@@ -16,7 +13,7 @@ public class EnemyConfigs : ScriptableObject
         {
             if (_instance == null)
             {
-                _instance = GameManager.Instance.GetResourceFile<EnemyConfigs>(ENEMY_CONFIGS_FILE_PATH);
+                _instance = GameManager.Instance.GetResourceFile<EnemyConfigs>(GameDefine.ENEMY_CONFIGS_FILE_PATH);
 
                 if (_instance == null)
                 {
@@ -28,19 +25,28 @@ public class EnemyConfigs : ScriptableObject
     }
     #endregion
 
-    public List<EnemyConfig> enemyConfigs;
+    [SerializeField] private List<EnemyConfig> enemies;
+
+    public List<EnemyConfig> Enemies { get => this.enemies; }
 }
 
 [System.Serializable]
 public class EnemyConfig
 {
-    public int enemyTypeId;
+    [SerializeField] private int typeId;
 
-    public float health;
-    public float speed;
-    public int point;
+    [SerializeField] private float health;
+    [SerializeField] private float speed;
+    [SerializeField] private int point;
 
     // configurations for shootable enemies aka boss
-    public float cooldown;
-    public int bulletId;
+    [SerializeField] private float cooldown;
+    [SerializeField] private int bulletId;
+
+    public int TypeId { get => this.typeId;}
+    public float Health { get => this.health; }
+    public float Speed { get => this.speed; }
+    public int Point { get => this.point; }
+    public float Cooldown { get => this.cooldown; }
+    public int BulletId { get => this.bulletId; }
 }

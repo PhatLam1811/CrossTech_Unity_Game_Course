@@ -1,10 +1,10 @@
-using System.Collections;
 using System.Collections.Generic;
 
 [System.Serializable]
 public class PlayerData
 {
     public float health;
+
     public int currentBulletId;
 
     public int specialBullet1Id;

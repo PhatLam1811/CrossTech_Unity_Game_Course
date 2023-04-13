@@ -1,19 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public static class GameDefine
 {
     // data keys
     public const string PLAYER_INFO_DATA = "PLAYER_INFO_DATA";
 
-    // player
-    public const float DEFAULT_PLAYER_SPEED = 3f;
-    public const float DEFAULT_PLAYER_ATK_CD = 0.2f;
-    public const float DEFAULT_PLAYER_HP = 10f;
-    public const int DEFAULT_PLAYER_SCORE = 0;
-    public const int DEFAULT_PLAYER_SP_BULLET_1_AMT = 5;
-    public const int DEFAULT_PLAYER_SP_BULLET_2_AMT = 5;
+    // path
+    public const string HIGHSCORE_DIALOG_PATH = "UI Elements/Highscore Dialog";
+    public const string START_DIALOG_PATH = "UI Elements/Start Dialog";
+    public const string ENEMY_CONFIGS_FILE_PATH = "Configs/EnemyConfigs";
+    public const string PLAYER_CONFIG_FILE_PATH = "Configs/PlayerConfig";
 
     // bullet
     public const int DEFAULT_BULLET_ID = 0;

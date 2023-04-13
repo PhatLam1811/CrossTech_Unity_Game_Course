@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,13 +16,11 @@ public class EnemyManager : MonoSingleton<EnemyManager>
     private float untilBossCount;
     private Camera viewport;
 
-    // Start is called before the first frame update
     void Start()
     {
         this.Init();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!this.isGameOver)
@@ -34,21 +31,27 @@ public class EnemyManager : MonoSingleton<EnemyManager>
         }
     }
 
+    private void Init()
+    {
+        this.viewport = Camera.main;
+        this.isGameOver = true;
+    }
+
     public void StartGame()
     {
         this.isBossAppeared = false;
         this.baseEnemyCD = BASE_ENEMY_SPAWN_INTERVAL;
         this.untilBossCount = NUMBER_OF_ENEMIES_BEFORE_BOSS; // boss appear after the 15th base enemy
 
+        GamePlayManager.Instance.onGameOverCallback -= this.GameOver; // prevent duplicates
         GamePlayManager.Instance.onGameOverCallback += this.GameOver;
 
         this.isGameOver = false;
     }
 
-    private void Init()
+    public EnemyConfig GetConfigOfType(int enemyTypeId)
     {
-        this.viewport = Camera.main;
-        this.isGameOver = true;
+        return GameManager.Instance.GetEnemyConfigOfType(enemyTypeId);
     }
 
     // ==================================================

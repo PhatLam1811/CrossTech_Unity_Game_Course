@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GamePlayManager : MonoSingleton<GamePlayManager>
@@ -74,7 +71,7 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
 
         movingVector = new Vector3(x: hor, y: ver);
 
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && !this.isGameOver)
         {
             this.ClearAllGameData();
         }
@@ -89,9 +86,9 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
         this.GameOver();
     }
 
-    public int GetPlayerCurrentBullet() 
-    { 
-        return PlayerData.Instance.currentBulletId; 
+    public int GetPlayerCurrentBullet()
+    {
+        return PlayerData.Instance.currentBulletId;
     }
 
     // ==================================================

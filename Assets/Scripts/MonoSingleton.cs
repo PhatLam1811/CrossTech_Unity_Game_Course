@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour //MonoSingleton<T>
@@ -9,7 +7,7 @@ public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour //MonoSing
     {
         get
         {
-            if(m_Instance == null)
+            if (m_Instance == null)
                 m_Instance = GameObject.FindObjectOfType(typeof(T)) as T;
 
             // Object not found, we create a temporary one

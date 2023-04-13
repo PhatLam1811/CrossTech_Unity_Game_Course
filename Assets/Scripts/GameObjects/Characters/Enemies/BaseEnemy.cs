@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseEnemy : BaseCharacter
@@ -12,10 +9,18 @@ public class BaseEnemy : BaseCharacter
     {
         base.Init();
 
-        this.health = 3f;
-        this.point = 100;
-        this.speed = 3f;
+        this.LoadConfig();
+
         this.movingVector = Vector3.down;
+    }
+
+    protected override void LoadConfig()
+    {
+        EnemyConfig config = EnemyManager.Instance.GetConfigOfType(GameDefine.BASE_ENEMY_ID);
+
+        this.health = config.Health;
+        this.point = config.Point;
+        this.speed = config.Speed;
     }
 
     public override void Move(float elapsedTime)
@@ -39,11 +44,6 @@ public class BaseEnemy : BaseCharacter
         this.health -= dmgTaken;
 
         if (this.health <= 0f) this.OnDefeated();
-    }
-
-    protected virtual void LoadConfig()
-    {
-        
     }
 
     public virtual void OnCollidedWithPlayer(Player player, float dmgTaken)

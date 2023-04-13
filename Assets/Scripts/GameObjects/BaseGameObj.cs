@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseGameObj : MonoBehaviour
@@ -42,7 +40,10 @@ public class BaseGameObj : MonoBehaviour
         this.speed = 0f;
         this.damage = 1f;
 
+        GamePlayManager.Instance.onGameOverCallback -= this.GameOver;
         GamePlayManager.Instance.onGameOverCallback += this.GameOver;
+
+        GamePlayManager.Instance.onGameReplayCallback -= this.OnReplayGame;
         GamePlayManager.Instance.onGameReplayCallback += this.OnReplayGame;
 
         this.isGameOver = false;
