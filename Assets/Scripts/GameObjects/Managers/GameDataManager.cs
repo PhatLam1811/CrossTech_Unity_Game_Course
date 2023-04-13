@@ -5,19 +5,7 @@ public class GameDataManager : MonoSingleton<GameDataManager>
 {
     public PlayerData playerData;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void OpenApp()
+    public void StartGame()
     {
         this.LoadPlayerData();
         GamePlayManager.Instance.StartGame();
@@ -131,6 +119,8 @@ public class GameDataManager : MonoSingleton<GameDataManager>
 
     public void GameOver()
     {
+        GamePlayManager.Instance.onGameOverCallback -= this.GameOver;
+
         this.UpdatePlayerHighScore();
         this.ResetPlayerData();
     }

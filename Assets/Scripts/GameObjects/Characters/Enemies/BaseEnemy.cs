@@ -8,15 +8,12 @@ public class BaseEnemy : BaseCharacter
     protected float health;
     protected int point;
 
-    public float GetHealth() { return health; }
-    public int GetPoint() { return point; }
-
     protected override void Init()
     {
         base.Init();
 
-        this.health = 1f;
-        this.point = 1;
+        this.health = 3f;
+        this.point = 100;
         this.speed = 3f;
         this.movingVector = Vector3.down;
     }
@@ -29,7 +26,7 @@ public class BaseEnemy : BaseCharacter
 
         if (viewportPos.y < 0f) // 0f: viewport's bottom edge
         {
-            Destroy(gameObject);
+            this.DestroySelf();
         }
         else
         {
@@ -53,6 +50,6 @@ public class BaseEnemy : BaseCharacter
     {
         GamePlayManager.Instance.OnDefeatEnemy(this.point);
 
-        Destroy(this.gameObject);
+        this.DestroySelf();
     }
 }

@@ -7,6 +7,7 @@ using TMPro;
 public class GameUIManager : MonoSingleton<GameUIManager>
 {
     [SerializeField] private Image imgHealthBar;
+    [SerializeField] private Image imgHealth;
     [SerializeField] private Button btnSpAkt1;
     [SerializeField] private Button btnSpAkt2;
     [SerializeField] private TextMeshProUGUI txtSpBulletAmt1;
@@ -18,23 +19,19 @@ public class GameUIManager : MonoSingleton<GameUIManager>
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        this.SetActive(false);
     }
 
     public void StartGame(float health, int score, int spBullet1Amt, int spBullet2Amt)
     {
-        this.imgHealthBar.fillAmount = health / GameDefine.DEFAULT_PLAYER_HP;
+        this.imgHealth.fillAmount = health / GameDefine.DEFAULT_PLAYER_HP;
         this.txtScore.text = score.ToString();
         this.txtSpBulletAmt1.text = "x" + spBullet1Amt.ToString();
         this.txtSpBulletAmt2.text = "x" + spBullet2Amt.ToString();
         this.btnSpAkt1.interactable = spBullet1Amt > 0;
         this.btnSpAkt2.interactable = spBullet2Amt > 0;
+
+        this.SetActive();
 
         GamePlayManager.Instance.onGameOverCallback += this.GameOver;
         this.isGameOver = false;
@@ -42,7 +39,20 @@ public class GameUIManager : MonoSingleton<GameUIManager>
 
     public void GameOver()
     {
+        GamePlayManager.Instance.onGameOverCallback -= this.GameOver;
+
         this.isGameOver = true;
+    }
+
+    public void SetActive(bool value = true)
+    {
+        this.imgHealthBar.gameObject.SetActive(value);
+        this.imgHealth.gameObject.SetActive(value);
+        this.txtScore.gameObject.SetActive(value);
+        this.btnSpAkt1.gameObject.SetActive(value);
+        this.btnSpAkt2.gameObject.SetActive(value);
+        this.txtSpBulletAmt1.gameObject.SetActive(value);
+        this.txtSpBulletAmt2.gameObject.SetActive(value);
     }
 
     // ==================================================
@@ -51,7 +61,7 @@ public class GameUIManager : MonoSingleton<GameUIManager>
     {
         if (this.isGameOver) return;
         
-        this.imgHealthBar.fillAmount = currentHealth / GameDefine.DEFAULT_PLAYER_HP;
+        this.imgHealth.fillAmount = currentHealth / GameDefine.DEFAULT_PLAYER_HP;
     }
 
     public void OnPlayerScoreChange(int newScore)

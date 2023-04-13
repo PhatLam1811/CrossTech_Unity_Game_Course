@@ -43,7 +43,8 @@ public class BaseGameObj : MonoBehaviour
         this.damage = 1f;
 
         GamePlayManager.Instance.onGameOverCallback += this.GameOver;
-        // GamePlayManager.Instance.LoadGameObjs(this);
+        GamePlayManager.Instance.onGameReplayCallback += this.OnReplayGame;
+
         this.isGameOver = false;
     }
 
@@ -52,8 +53,24 @@ public class BaseGameObj : MonoBehaviour
         this.transform.position += this.movingVector * elapsedTime * this.speed;
     }
 
+    protected virtual void DestroySelf()
+    {
+        GamePlayManager.Instance.onGameOverCallback -= this.GameOver;
+        GamePlayManager.Instance.onGameReplayCallback -= this.OnReplayGame;
+
+        if (this.gameObject != null)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     public void GameOver()
     {
         this.isGameOver = true;
+    }
+
+    public void OnReplayGame()
+    {
+        this.DestroySelf();
     }
 }

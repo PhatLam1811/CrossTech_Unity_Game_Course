@@ -38,8 +38,8 @@ public class BuckshotBullet : BaseBullet
     private void Explode()
     {
         // generate 2 more buckshots
-        var leftShot = Instantiate(pfBuckExplode, transform.position, Quaternion.identity);
-        var rightShot = Instantiate(pfBuckExplode, transform.position, Quaternion.identity);
+        var leftShot = Instantiate(this.pfBuckExplode, this.transform.position, Quaternion.identity);
+        var rightShot = Instantiate(this.pfBuckExplode, this.transform.position, Quaternion.identity);
 
         Vector3 leftShotVector = new Vector3(x: -0.5f, y: 1f);
         Vector3 rightShotVector = new Vector3(x: 0.5f, y: 1f);
@@ -53,12 +53,12 @@ public class BuckshotBullet : BaseBullet
         rightShot.GetComponent<ExplodedBuckshot>().SetSpeed(explodingSpeed);
 
         // exploded bullets' rotation
-        float rotateAngle = Vector3.Angle(movingVector, leftShotVector);
+        float rotateAngle = Vector3.Angle(this.movingVector, leftShotVector);
 
         leftShot.GetComponent<ExplodedBuckshot>().transform.Rotate(Vector3.forward, rotateAngle);
         rightShot.GetComponent<ExplodedBuckshot>().transform.Rotate(Vector3.forward, -rotateAngle);
 
-        speed = explodingSpeed;
-        isExploded = true;
+        this.speed = explodingSpeed;
+        this.isExploded = true;
     }
 }

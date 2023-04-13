@@ -28,7 +28,7 @@ public class HomingBullet : BaseBullet
     public void SetTarget(BaseEnemy target)
     {
         this.target = target; // lock target found by radar
-        speed = homingSpeed;
+        this.speed = homingSpeed;
     }
 
     public void Homing()

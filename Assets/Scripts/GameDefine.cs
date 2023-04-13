@@ -12,7 +12,7 @@ public static class GameDefine
     public const float DEFAULT_PLAYER_POS_Y = 0f;
     public const float DEFAULT_PLAYER_POS_Z = 0f;
     public const float DEFAULT_PLAYER_SPEED = 3f;
-    public const float DEFAULT_PLAYER_ATK_CD = 0.7f;
+    public const float DEFAULT_PLAYER_ATK_CD = 0.2f;
     public const float DEFAULT_PLAYER_HP = 10f;
     public const int DEFAULT_PLAYER_SCORE = 0;
     public const int DEFAULT_PLAYER_SP_BULLET_1_AMT = 5;

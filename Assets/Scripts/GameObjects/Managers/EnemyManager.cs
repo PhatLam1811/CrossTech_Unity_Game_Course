@@ -33,17 +33,19 @@ public class EnemyManager : MonoSingleton<EnemyManager>
 
     public void StartGame()
     {
+        this.isBossAppeared = false;
+        this.baseEnemyCD = GameDefine.BASE_ENEMY_SPAWN_INTERVAL;
+        this.untilBossCount = 15; // boss appear after the 15th base enemy
+
         GamePlayManager.Instance.onGameOverCallback += this.GameOver;
+
         this.isGameOver = false;
     }
 
     private void Init()
     {
         this.viewport = Camera.main;
-        this.isBossAppeared = false;
-        this.baseEnemyCD = GameDefine.BASE_ENEMY_SPAWN_INTERVAL;
-        this.untilBossCount = 15; // boss appear after the 15th base enemy
-        this.isGameOver = false;
+        this.isGameOver = true;
     }
 
     // ==================================================
@@ -122,6 +124,8 @@ public class EnemyManager : MonoSingleton<EnemyManager>
 
     public void GameOver()
     {
+        GamePlayManager.Instance.onGameOverCallback -= this.GameOver;
+
         this.isGameOver = true;
     }
 }

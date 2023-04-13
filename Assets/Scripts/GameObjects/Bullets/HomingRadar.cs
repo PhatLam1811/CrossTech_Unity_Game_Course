@@ -8,16 +8,16 @@ public class HomingRadar : BaseGameObj
     {
         if (collision.TryGetComponent(out BaseEnemy enemy))
         {
-            OnCollidedWithEnemy(enemy);
+            this.OnCollidedWithEnemy(enemy);
         }
     }
 
     public void OnCollidedWithEnemy(BaseEnemy enemy)
     {
         // lock target for homing bullet
-        GetComponentInParent<HomingBullet>().SetTarget(enemy);
+        this.GetComponentInParent<HomingBullet>().SetTarget(enemy);
 
         // radar is no longer needed (can be fixed)
-        Destroy(gameObject);
+        this.DestroySelf();
     }
 }

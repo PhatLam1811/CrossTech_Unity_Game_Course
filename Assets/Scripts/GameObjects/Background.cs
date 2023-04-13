@@ -4,14 +4,27 @@ using UnityEngine;
 
 public class Background : BaseGameObj
 {
-    [SerializeField] private GameObject reloadCoord;
+    [SerializeField] private Transform bufferTransform;
+
+    private Vector3 reloadPosition;
+
+    private void Awake()
+    {
+        if (this.transform == this.bufferTransform)
+        {
+            // detach buffer to stop it from chasing its parent
+            // the buffer will move in sync with the background (speed = 1.5f)
+            this.transform.SetParent(null, true);
+        }
+    }
 
     protected override void Init()
     {
         base.Init();
 
-        this.speed = 1f;
+        this.speed = 1.5f;
         this.movingVector = Vector3.down;
+        this.reloadPosition = this.bufferTransform.position;
     }
 
     public override void Move(float elapsedTime)
@@ -32,13 +45,8 @@ public class Background : BaseGameObj
         }
     }
 
-    public Vector3 GetReloadCoord()
-    {
-        return this.reloadCoord.transform.position;
-    }
-
     private void Reload()
     {
-        this.transform.position = this.reloadCoord.transform.position;
+        this.transform.position = this.reloadPosition;
     }
 }

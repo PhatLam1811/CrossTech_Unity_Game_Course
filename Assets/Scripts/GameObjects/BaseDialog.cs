@@ -11,9 +11,6 @@ public class BaseDialog : MonoBehaviour
     protected object data;
     protected UnityAction callbackShow;
 
-    public const string ANIMATOR_SHOW = "ScaleBig";
-    public const string ANIMATOR_HIDE = "";
-
 #if UNITY_EDITOR
     protected virtual void OnValidate()
     {
@@ -32,7 +29,7 @@ public class BaseDialog : MonoBehaviour
         this.data = data;
         this.callbackShow = callback;
 
-        this._animator.Play(ANIMATOR_SHOW);
+        // this._animator.Play(ANIMATOR_SHOW);
     }
 
     public virtual void OnCompleteShow()
@@ -49,7 +46,7 @@ public class BaseDialog : MonoBehaviour
 
     public virtual void OnHide()
     {
-        this._animator.Play(ANIMATOR_HIDE);
+        // this._animator.Play(ANIMATOR_HIDE);
     }
 
     public virtual void OnCompleteHide()

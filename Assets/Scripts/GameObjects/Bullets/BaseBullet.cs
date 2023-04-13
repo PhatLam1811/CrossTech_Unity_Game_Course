@@ -11,7 +11,7 @@ public class BaseBullet : BaseGameObj
             EnemyManager.Instance.OnCollidedWithBullet(enemy, this, this.damage);
 
             // bullet disapear after hitting an enemy
-            Destroy(gameObject);
+            this.DestroySelf();
         }
     }
 
@@ -19,16 +19,16 @@ public class BaseBullet : BaseGameObj
     {
         base.Init();
 
-        damage = 1;
-        speed = 2f;
-        movingVector = new Vector3(x: 0f, y: 1f);
+        this.damage = 1;
+        this.speed = 10f;
+        this.movingVector = Vector3.up;
     }
 
     public override void Move(float elapsedTime)
     {
         // switch to viewport's (main camera) normalized coordinate
-        Vector3 worldPos = transform.position;
-        Vector3 viewportPos = viewport.WorldToViewportPoint(worldPos);
+        Vector3 worldPos = this.transform.position;
+        Vector3 viewportPos = this.viewport.WorldToViewportPoint(worldPos);
 
         if (viewportPos.y >= 0f && viewportPos.y <= 1f &&   // 0f: viewport's bottom edge - 1f: viewport's top edge
             viewportPos.x >= 0f && viewportPos.x <= 1f)     // 0f: viewport's left edge - 1f: viewport's right edge
@@ -38,7 +38,7 @@ public class BaseBullet : BaseGameObj
         else
         {
             // bullet disapear if out of camera view
-            Destroy(gameObject);
+            this.DestroySelf();
         }
     }
 }

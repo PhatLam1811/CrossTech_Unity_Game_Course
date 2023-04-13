@@ -23,6 +23,9 @@ public class EnemyBullet : BaseBullet
 
     public virtual void OnCollidedWithPlayer(Player player)
     {
+        GamePlayManager.Instance.onGameOverCallback -= this.GameOver;
+        GamePlayManager.Instance.onGameReplayCallback -= this.OnReplayGame;
+
         Destroy(this.gameObject);
     }
 }

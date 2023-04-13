@@ -6,10 +6,12 @@ public class ExplodedBuckshot : BaseBullet
 {
     protected override void Init() 
     { 
-        viewport = Camera.main;
-        damage = 1;
+        this.viewport = Camera.main;
+        this.damage = 1;
 
         GamePlayManager.Instance.onGameOverCallback += this.GameOver;
+        GamePlayManager.Instance.onGameReplayCallback += this.OnReplayGame;
+
         this.isGameOver = false;
     }
 }

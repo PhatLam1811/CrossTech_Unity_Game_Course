@@ -37,9 +37,9 @@ public class BossEnemy : BaseEnemy
     {
         base.Init();
 
-        this.health = 10f;
+        this.health = 20f;
         this.speed = 1f;
-        this.point = 5;
+        this.point = 500;
         this.movingVector = Vector3.down;
         this.cooldown = atkInterval;
         this.isAttacking = false;

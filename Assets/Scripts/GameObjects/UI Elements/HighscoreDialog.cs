@@ -2,11 +2,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using TMPro;
+using UnityEngine.Events;
 
 public class HighscoreDialog : BaseDialog
 {
     [SerializeField] private TextMeshProUGUI _prefabText;
     [SerializeField] private Transform _pfPanelScore;
+
+    public const string ANIMATOR_SHOW = "ScaleBig";
+    public const string ANIMATOR_HIDE = "ScaleSmall";
 
     public override void OnCompleteShow()
     {
@@ -40,5 +44,22 @@ public class HighscoreDialog : BaseDialog
             Debug.Log(this.GetType().Name + " - No data found!");
             return;
         }
+    }
+
+    public override void OnHide()
+    {
+        this._animator.Play(ANIMATOR_HIDE);
+    }
+
+    public override void OnCompleteHide()
+    {
+        Destroy(this.gameObject);
+    }
+
+    public void OnReplayBtnClicked()
+    {
+        GameManager.Instance.ReplayGame();
+
+        this.ClickCloseDialog();
     }
 }

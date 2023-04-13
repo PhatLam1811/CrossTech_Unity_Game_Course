@@ -8,19 +8,20 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
     [SerializeField] private GameObject pfBackground;
     [SerializeField] private GameObject pfPlayer;
 
-    private GameObject background1;
-    private GameObject background2;
-
     private GameObject player;
 
     private bool isGameOver;
+
     public delegate void GameOverCallback();
     public event GameOverCallback onGameOverCallback;
+
+    public delegate void ReplayGameCallback();
+    public event ReplayGameCallback onGameReplayCallback;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.isGameOver = true;
     }
 
     // Update is called once per frame
@@ -38,19 +39,16 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
 
     public void StartGame()
     {
-        // backgrounds
-        this.background1 = Instantiate(this.pfBackground, Vector3.zero, Quaternion.identity);
-        Vector3 bg2InitCoord = this.background1.GetComponent<Background>().GetReloadCoord();
-        
-        this.background2 = Instantiate(this.pfBackground, bg2InitCoord / 2, Quaternion.identity);
+        // background
+        Instantiate(this.pfBackground, Vector3.zero, Quaternion.identity);
 
         // player
         this.player = Instantiate(this.pfPlayer, Vector3.zero, Quaternion.identity);
 
         // others
-        EnemyManager.Instance.StartGame();
-        BulletManager.Instance.StartGame();
-        GameUIManager.Instance.StartGame(
+        EnemyManager.Instance.StartGame();  // enemy
+        BulletManager.Instance.StartGame(); // bullet
+        GameUIManager.Instance.StartGame(   // UI elements
             PlayerData.Instance.health,
             PlayerData.Instance.score,
             PlayerData.Instance.spBullet1Amt,
@@ -59,6 +57,7 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
         // Add callback on game over for GameDataManager & GameManager
         this.onGameOverCallback += GameDataManager.Instance.GameOver;
         this.onGameOverCallback += GameManager.Instance.GameOver;
+
         this.isGameOver = false;
     }
 
@@ -147,5 +146,14 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
         this.onGameOverCallback?.Invoke();
 
         Debug.Log("Game Over!!!");
+    }
+
+    public void ReplayGame()
+    {
+        this.onGameReplayCallback?.Invoke();
+
+        this.StartGame();
+
+        Debug.Log("Replay Game!!!");
     }
 }

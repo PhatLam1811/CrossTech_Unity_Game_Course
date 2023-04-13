@@ -5,30 +5,36 @@ using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    [SerializeField] private Transform _dialogPosition;
+    [SerializeField] private Transform _dialogPos;
 
     private const string HIGHSCORE_DIALOG_PATH = "UI Elements/Highscore Dialog";
+    private const string START_DIALOG_PATH = "UI Elements/Start Dialog";
 
-    // Start is called before the first frame update
     void Start()
     {
         this.OpenApp();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OpenApp()
     {
-        GameDataManager.Instance.OpenApp();
+        this.OnShowDialog<StartDialog>(START_DIALOG_PATH);
+    }
+
+    public void StartGame()
+    {
+        GameDataManager.Instance.StartGame();
     }
 
     public void GameOver()
     {
+        GamePlayManager.Instance.onGameOverCallback -= this.GameOver;
+
         this.OnShowDialog<HighscoreDialog>(HIGHSCORE_DIALOG_PATH, data: PlayerData.Instance.highScores);
+    }
+
+    public void ReplayGame()
+    {
+        GamePlayManager.Instance.ReplayGame();
     }
 
     public void OnShowDialog<T>(string path, object data = null, UnityEngine.Events.UnityAction callbackCompleteShow = null) where T : BaseDialog
@@ -37,7 +43,7 @@ public class GameManager : MonoSingleton<GameManager>
 
         if (dialogPrefab != null)
         {
-            T dialogComponent = (Instantiate(dialogPrefab, _dialogPosition)).GetComponent<T>();
+            T dialogComponent = (Instantiate(dialogPrefab, _dialogPos)).GetComponent<T>();
             
             if (dialogComponent != null)
             {
