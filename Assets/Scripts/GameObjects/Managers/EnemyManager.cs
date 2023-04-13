@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnemyManager : MonoSingleton<EnemyManager>
 {
+    private const float BASE_ENEMY_SPAWN_INTERVAL = 1f;
+    private const int NUMBER_OF_ENEMIES_BEFORE_BOSS = 15;
+
     [SerializeField] private List<GameObject> pfEnemies;
 
     private bool isGameOver;
@@ -34,8 +37,8 @@ public class EnemyManager : MonoSingleton<EnemyManager>
     public void StartGame()
     {
         this.isBossAppeared = false;
-        this.baseEnemyCD = GameDefine.BASE_ENEMY_SPAWN_INTERVAL;
-        this.untilBossCount = 15; // boss appear after the 15th base enemy
+        this.baseEnemyCD = BASE_ENEMY_SPAWN_INTERVAL;
+        this.untilBossCount = NUMBER_OF_ENEMIES_BEFORE_BOSS; // boss appear after the 15th base enemy
 
         GamePlayManager.Instance.onGameOverCallback += this.GameOver;
 
@@ -58,7 +61,7 @@ public class EnemyManager : MonoSingleton<EnemyManager>
         {
             Vector3 generatedPos = RandomizePosition();
 
-            Instantiate(this.pfEnemies[GameDefine.BASE_ENEMY_TYPE], generatedPos, Quaternion.identity);
+            Instantiate(this.pfEnemies[GameDefine.BASE_ENEMY_ID], generatedPos, Quaternion.identity);
 
             if (this.untilBossCount > 0)
             {
@@ -74,7 +77,7 @@ public class EnemyManager : MonoSingleton<EnemyManager>
             }
 
             // reset cooldown
-            this.baseEnemyCD = GameDefine.BASE_ENEMY_SPAWN_INTERVAL;
+            this.baseEnemyCD = BASE_ENEMY_SPAWN_INTERVAL;
         }
     }
 
@@ -91,7 +94,7 @@ public class EnemyManager : MonoSingleton<EnemyManager>
         // reset depth value (viewport's default depth is -10)
         worldPos.z = 0f;
 
-        Instantiate(this.pfEnemies[GameDefine.BOSS_ENEMY_TYPE], worldPos, Quaternion.identity);
+        Instantiate(this.pfEnemies[GameDefine.BOSS_ENEMY_ID], worldPos, Quaternion.identity);
     }
 
     private Vector3 RandomizePosition()

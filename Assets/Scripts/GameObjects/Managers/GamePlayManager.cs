@@ -8,14 +8,13 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
     [SerializeField] private GameObject pfBackground;
     [SerializeField] private GameObject pfPlayer;
 
-    private GameObject player;
-
+    private Player player;
     private bool isGameOver;
 
     public delegate void GameOverCallback();
-    public event GameOverCallback onGameOverCallback;
-
     public delegate void ReplayGameCallback();
+
+    public event GameOverCallback onGameOverCallback;
     public event ReplayGameCallback onGameReplayCallback;
 
     // Start is called before the first frame update
@@ -33,7 +32,7 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
         {
             float elapsedTime = Time.deltaTime;
 
-            this.player.GetComponent<Player>().Move(elapsedTime, movingVector);
+            this.player.Move(elapsedTime, movingVector);
         }
     }
 
@@ -43,7 +42,7 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
         Instantiate(this.pfBackground, Vector3.zero, Quaternion.identity);
 
         // player
-        this.player = Instantiate(this.pfPlayer, Vector3.zero, Quaternion.identity);
+        this.player = Instantiate(this.pfPlayer, Vector3.zero, Quaternion.identity).GetComponent<Player>();
 
         // others
         EnemyManager.Instance.StartGame();  // enemy
@@ -51,11 +50,15 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
         GameUIManager.Instance.StartGame(   // UI elements
             PlayerData.Instance.health,
             PlayerData.Instance.score,
-            PlayerData.Instance.spBullet1Amt,
-            PlayerData.Instance.spBullet2Amt);
+            PlayerData.Instance.specialBullet1Amount,
+            PlayerData.Instance.specialBullet2Amount);
 
-        // Add callback on game over for GameDataManager & GameManager
+        // game over callback for GameDataManager
+        this.onGameOverCallback -= GameDataManager.Instance.GameOver; // prevent duplicates
         this.onGameOverCallback += GameDataManager.Instance.GameOver;
+
+        // game over callback for GameManager
+        this.onGameOverCallback -= GameManager.Instance.GameOver; // prevent duplicates
         this.onGameOverCallback += GameManager.Instance.GameOver;
 
         this.isGameOver = false;
@@ -86,9 +89,9 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
         this.GameOver();
     }
 
-    public int GetPlayerCurrentBullet()
-    {
-        return PlayerData.Instance.currentBullet;
+    public int GetPlayerCurrentBullet() 
+    { 
+        return PlayerData.Instance.currentBulletId; 
     }
 
     // ==================================================
@@ -100,7 +103,7 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
 
     public void OnPlayerTakenDamage(float dmgTaken)
     {
-        GameDataManager.Instance.UpdatePlayerHP(dmgTaken);
+        GameDataManager.Instance.UpdatePlayerHealth(dmgTaken);
 
         GameUIManager.Instance.OnPlayerHealthChange(PlayerData.Instance.health);
 
@@ -109,24 +112,24 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
 
     public void OnInvokeSpecialAtk1()
     {
-        this.player.GetComponent<Player>().InvokeSpecialAtk(PlayerData.Instance.spBullet1Type);
+        this.player.InvokeSpecialAtk(PlayerData.Instance.specialBullet1Id);
 
-        int remainingAmt = PlayerData.Instance.spBullet1Amt - 1;
+        int remainingAmt = PlayerData.Instance.specialBullet1Amount - 1;
 
         GameUIManager.Instance.OnOutOfSpBullets1(remainingAmt);
 
-        GameDataManager.Instance.UpdatePlayerSpBullet1Amt(remainingAmt);
+        GameDataManager.Instance.UpdatePlayerSpecialBullet1Amount(remainingAmt);
     }
 
     public void OnInvokeSpecialAtk2()
     {
-        this.player.GetComponent<Player>().InvokeSpecialAtk(PlayerData.Instance.spBullet2Type);
+        this.player.InvokeSpecialAtk(PlayerData.Instance.specialBullet2Id);
 
-        int remainingAmt = PlayerData.Instance.spBullet2Amt - 1;
+        int remainingAmt = PlayerData.Instance.specialBullet2Amount - 1;
 
         GameUIManager.Instance.OnOutOfSpBullets2(remainingAmt);
 
-        GameDataManager.Instance.UpdatePlayerSpBullet2Amt(remainingAmt);
+        GameDataManager.Instance.UpdatePlayerSpecialBullet2Amount(remainingAmt);
     }
 
     public void OnDefeatEnemy(int point)

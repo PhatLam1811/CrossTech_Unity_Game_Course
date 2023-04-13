@@ -41,6 +41,11 @@ public class BaseEnemy : BaseCharacter
         if (this.health <= 0f) this.OnDefeated();
     }
 
+    protected virtual void LoadConfig()
+    {
+        
+    }
+
     public virtual void OnCollidedWithPlayer(Player player, float dmgTaken)
     {
         this.OnTakenDamage(dmgTaken);

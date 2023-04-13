@@ -49,16 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfGunBarrel: {fileID: 2660683303897988030}
-  pfBullets:
-  - {fileID: 1921367264671183940, guid: 46b6bc16008153f468ab5a048a519a2c, type: 3}
-  - {fileID: 2727749215040929959, guid: 673b436a46dc4894b9b686720760efd2, type: 3}
-  - {fileID: 755907320091952563, guid: f9588899171b6dd4db89fdca84e2b87d, type: 3}
-  imgHealthBar: {fileID: 0}
-  btnSpecialAkt1: {fileID: 0}
-  btnSpecialAkt2: {fileID: 0}
-  txtHomingAmount: {fileID: 0}
-  txtBuckshotAmount: {fileID: 0}
-  txtScore: {fileID: 0}
+  playerConfigs: {fileID: 11400000, guid: ad2a47fd6f720c74db04a9c11b27cca2, type: 2}
 --- !u!212 &2660683303510860042
 SpriteRenderer:
   m_ObjectHideFlags: 0

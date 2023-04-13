@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    [SerializeField] private Transform _dialogPos;
-
     private const string HIGHSCORE_DIALOG_PATH = "UI Elements/Highscore Dialog";
     private const string START_DIALOG_PATH = "UI Elements/Start Dialog";
+
+    [SerializeField] private Transform _dialogPos;
 
     void Start()
     {
@@ -20,6 +20,8 @@ public class GameManager : MonoSingleton<GameManager>
         this.OnShowDialog<StartDialog>(START_DIALOG_PATH);
     }
 
+    // ==================================================
+
     public void StartGame()
     {
         GameDataManager.Instance.StartGame();
@@ -27,8 +29,6 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void GameOver()
     {
-        GamePlayManager.Instance.onGameOverCallback -= this.GameOver;
-
         this.OnShowDialog<HighscoreDialog>(HIGHSCORE_DIALOG_PATH, data: PlayerData.Instance.highScores);
     }
 
@@ -36,6 +36,8 @@ public class GameManager : MonoSingleton<GameManager>
     {
         GamePlayManager.Instance.ReplayGame();
     }
+
+    // ==================================================
 
     public void OnShowDialog<T>(string path, object data = null, UnityEngine.Events.UnityAction callbackCompleteShow = null) where T : BaseDialog
     {
@@ -51,6 +53,8 @@ public class GameManager : MonoSingleton<GameManager>
             }
         }
     }
+
+    // ==================================================
 
     public T GetResourceFile<T>(string path) where T : UnityEngine.Object
     {

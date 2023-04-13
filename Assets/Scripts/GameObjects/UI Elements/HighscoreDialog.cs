@@ -18,10 +18,10 @@ public class HighscoreDialog : BaseDialog
 
         if (this.data != null)
         {
-            if (this.data.GetType() == typeof(List<Score>))
+            if (this.data.GetType() == typeof(List<HighScore>))
             {
                 // Sort by score (desc)
-                List<Score> descHighscores = ((List<Score>)this.data).OrderByDescending(i => i.score).ToList();
+                List<HighScore> descHighscores = ((List<HighScore>)this.data).OrderByDescending(i => i.score).ToList();
 
                 for (int i = 0; i < descHighscores.Count; i++)
                 {

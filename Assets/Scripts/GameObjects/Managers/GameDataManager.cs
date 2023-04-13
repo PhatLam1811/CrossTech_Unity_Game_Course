@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameDataManager : MonoSingleton<GameDataManager>
@@ -35,8 +36,7 @@ public class GameDataManager : MonoSingleton<GameDataManager>
             }
             else
             {
-                //Create New User;
-                this.CreateNewPlayer();
+                this.CreateNewPlayerData();
             }
         }
 
@@ -52,37 +52,58 @@ public class GameDataManager : MonoSingleton<GameDataManager>
         PlayerPrefs.SetString(GameDefine.PLAYER_INFO_DATA, jsonData);
     }
 
+    private void CreateNewPlayerData()
+    {
+        this.playerData = new PlayerData()
+        {
+            score = 0,
+            highScores = new List<HighScore>()
+        };
+
+        this.LoadPlayerDefaultConfig();
+
+        this.SavePlayerData();
+    }
+
+    private void LoadPlayerDefaultConfig()
+    {
+        PlayerConfig playerConfig = PlayerConfig.Instance;
+
+        this.playerData.health = playerConfig.health;
+
+        this.playerData.currentBulletId = playerConfig.defaultBulletId;
+
+        this.playerData.specialBullet1Id = playerConfig.specialBullet1Id;
+        this.playerData.specialBullet2Id = playerConfig.specialBullet2Id;
+
+        this.playerData.specialBullet1Amount = playerConfig.specialBullet1InitAmount;
+        this.playerData.specialBullet2Amount = playerConfig.specialBullet2InitAmount;
+
+        this.playerData.score = 0;
+    }
+
     public void ClearAllPlayerData()
     {
         PlayerPrefs.DeleteAll();
-        
-        this.CreateNewPlayer();
+        this.CreateNewPlayerData();
     }
 
     public void ResetPlayerData()
     {
         if (this.playerData != null)
         {
-            this.playerData.SetDefaultPlayerData();
+            this.LoadPlayerDefaultConfig();
             this.SavePlayerData();
         }
         else
         {
-            Debug.LogError("Player data not found!");
-            return;
+            Debug.LogError("Player data not found!"); return;
         }
-    }
-
-    private void CreateNewPlayer()
-    {
-        this.playerData = new PlayerData();
-
-        this.SavePlayerData();
     }
 
     // ==================================================
 
-    public void UpdatePlayerHP(float dmgTaken)
+    public void UpdatePlayerHealth(float dmgTaken)
     {
         this.playerData.health -= dmgTaken;
         this.SavePlayerData();
@@ -94,34 +115,37 @@ public class GameDataManager : MonoSingleton<GameDataManager>
         this.SavePlayerData();
     }
 
-    public void UpdatePlayerSpBullet1Amt(int remainingAmount)
+    public void UpdatePlayerSpecialBullet1Amount(int remainingAmount)
     {
-        this.playerData.spBullet1Amt = remainingAmount;
+        this.playerData.specialBullet1Amount = remainingAmount;
         this.SavePlayerData();
     }
 
-    public void UpdatePlayerSpBullet2Amt(int remainingAmount)
+    public void UpdatePlayerSpecialBullet2Amount(int remainingAmount)
     {
-        this.playerData.spBullet2Amt = remainingAmount;
+        this.playerData.specialBullet2Amount = remainingAmount;
         this.SavePlayerData();
     }
 
-    public void UpdatePlayerHighScore()
+    public void UpdatePlayerHighScores()
     {
-        Score currentRun = new Score();
-        currentRun.score = this.playerData.score;
-        currentRun.ticks = DateTime.Now.Ticks;
+        HighScore thisRunScore = new HighScore()
+        {
+            score = this.playerData.score,
+            ticks = DateTime.Now.Ticks
+        };
 
-        this.playerData.highScores.Add(currentRun);
+        this.playerData.highScores.Add(thisRunScore);
 
         this.SavePlayerData();
     }
+
+    // ==================================================
 
     public void GameOver()
     {
-        GamePlayManager.Instance.onGameOverCallback -= this.GameOver;
+        this.UpdatePlayerHighScores();
 
-        this.UpdatePlayerHighScore();
         this.ResetPlayerData();
     }
 }

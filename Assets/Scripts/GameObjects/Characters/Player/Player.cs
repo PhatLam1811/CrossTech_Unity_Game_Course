@@ -1,14 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
-using System;
 
 public class Player : BaseCharacter
 {
-    private float cooldown;
-
     [SerializeField] private GameObject pfGunBarrel;
+
+    private float atkCooldown;
+    private float atkInterval;
 
     // Update is called once per frame
     protected override void Update()
@@ -37,16 +36,17 @@ public class Player : BaseCharacter
     {
         base.Init();
 
-        this.cooldown = GameDefine.DEFAULT_PLAYER_ATK_CD;
-        this.speed = GameDefine.DEFAULT_PLAYER_SPEED;
+        this.LoadConfig();
+
+        this.atkInterval = this.atkCooldown;
     }
 
     public override void Attack(float elapsedTime)
     {
-        this.cooldown -= elapsedTime;
+        this.atkInterval -= elapsedTime;
 
         // shoot a bullet after cooldown
-        if (this.cooldown <= 0.0f)
+        if (this.atkInterval <= 0.0f)
         {
             Vector3 barrelPos = this.pfGunBarrel.transform.position;
             int currentBullet = GamePlayManager.Instance.GetPlayerCurrentBullet();
@@ -54,7 +54,7 @@ public class Player : BaseCharacter
             BulletManager.Instance.ShootBulletOfType(currentBullet, barrelPos);
 
             // reset cooldown
-            this.cooldown = GameDefine.DEFAULT_PLAYER_ATK_CD;
+            this.atkInterval = this.atkCooldown;
         }
     }
 
@@ -64,6 +64,14 @@ public class Player : BaseCharacter
     }
 
     // ==================================================
+
+    private void LoadConfig()
+    {
+        PlayerConfig config = PlayerConfig.Instance;
+
+        this.speed = config.speed;
+        this.atkCooldown = config.cooldown;
+    }
 
     public void Move(float elapsedTime, Vector3 movingVector)
     {
