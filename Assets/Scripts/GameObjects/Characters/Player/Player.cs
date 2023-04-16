@@ -20,11 +20,20 @@ public class Player : BaseCharacter
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        // hit by an enemy
         if (collision.TryGetComponent(out BaseEnemy enemy))
         {
-            EnemyManager.Instance.OnCollidedWithPlayer(enemy);
+            EnemyManager.Instance.OnPlayerCollidedWithEnemy(enemy);
 
             this.OnTakenDamage(enemy.GetDamageInflict());
+        }
+
+        // hit by an enemie's bullet
+        if (collision.TryGetComponent(out EnemyBullet bullet))
+        {
+            BulletManager.Instance.OnPlayerCollidedWithBullet(bullet);
+
+            this.OnTakenDamage(bullet.GetDamageInflict());
         }
     }
 

@@ -107,9 +107,9 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
 
     // ==================================================
 
-    public void OnPlayerCollidedWithBullet(Player player, EnemyBullet enemyBullet)
+    public void OnPlayerCollidedWithBullet(EnemyBullet enemyBullet)
     {
-        player.OnCollidedWithBullet(enemyBullet);
+        this.player.OnCollidedWithBullet(enemyBullet);
     }
 
     public void OnPlayerTakenDamage(float dmgTaken)

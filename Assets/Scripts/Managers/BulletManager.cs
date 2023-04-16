@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,5 +34,10 @@ public class BulletManager : MonoSingleton<BulletManager>
         {
             Instantiate(pfBullets[type], pos, Quaternion.identity);
         }
+    }
+
+    internal void OnPlayerCollidedWithBullet(EnemyBullet enemyBullet)
+    {
+        enemyBullet.OnCollidedWithPlayer();
     }
 }

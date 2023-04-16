@@ -16,6 +16,8 @@ public class EnemyManager : MonoSingleton<EnemyManager>
     private float untilBossCount;
     private Camera viewport;
 
+    // ==================================================
+
     void Start()
     {
         this.Init();
@@ -30,6 +32,8 @@ public class EnemyManager : MonoSingleton<EnemyManager>
             this.SpawnEnemies(elapsedTime);
         }
     }
+
+    // ==================================================
 
     private void Init()
     {
@@ -118,7 +122,7 @@ public class EnemyManager : MonoSingleton<EnemyManager>
 
     // ==================================================
 
-    public void OnCollidedWithPlayer(BaseEnemy enemy)
+    public void OnPlayerCollidedWithEnemy(BaseEnemy enemy)
     {
         enemy.OnCollidedWithPlayer();
     }

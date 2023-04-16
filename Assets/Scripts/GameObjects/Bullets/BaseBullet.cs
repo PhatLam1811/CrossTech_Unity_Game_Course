@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BaseBullet : BaseGameObj
 {
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent(out BaseEnemy enemy))
         {
