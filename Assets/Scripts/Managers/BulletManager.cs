@@ -14,7 +14,9 @@ public class BulletManager : MonoSingleton<BulletManager>
 
     public void StartGame()
     {
+        GamePlayManager.Instance.onGameOverCallback -= this.GameOver;
         GamePlayManager.Instance.onGameOverCallback += this.GameOver;
+
         this.isGameOver = false;
     }
 

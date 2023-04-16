@@ -26,6 +26,7 @@ public class BaseEnemy : BaseCharacter
 
     // ==================================================
 
+    #region Overrides
     protected override void LoadConfig()
     {
         EnemyConfig config = EnemyManager.Instance.GetConfigOfType(GameDefine.BASE_ENEMY_ID);
@@ -50,22 +51,30 @@ public class BaseEnemy : BaseCharacter
         }
     }
 
-    public virtual void OnCollidedWithPlayer(Player player, float dmgTaken)
+    public override void OnTakenDamage(float damageTaken)
     {
-        this.OnTakenDamage(dmgTaken);
+        if (this.health > damageTaken)
+        {
+            this.health -= damageTaken;
+        }
+        else
+        {
+            this.OnDefeated();
+        }
     }
+    #endregion
 
-    public override void OnTakenDamage(float dmgTaken)
+    // ==================================================
+
+    public virtual void OnCollidedWithPlayer()
     {
-        this.health -= dmgTaken;
-
-        if (this.health <= 0f) this.OnDefeated();
+        float damageTaken = GamePlayManager.Instance.GetPlayer().GetDamageInflict();
+        this.OnTakenDamage(damageTaken);
     }
 
     public virtual void OnDefeated()
     {
         GamePlayManager.Instance.OnDefeatEnemy(this.point);
-
         this.DestroySelf();
     }
 }

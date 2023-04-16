@@ -22,7 +22,7 @@ public class Player : BaseCharacter
     {
         if (collision.TryGetComponent(out BaseEnemy enemy))
         {
-            EnemyManager.Instance.OnCollidedWithPlayer(enemy, this, damage);
+            EnemyManager.Instance.OnCollidedWithPlayer(enemy);
 
             this.OnTakenDamage(enemy.GetDamageInflict());
         }
@@ -30,6 +30,7 @@ public class Player : BaseCharacter
 
     // ==================================================
 
+    #region Overrides
     protected override void Init()
     {
         base.Init();
@@ -45,7 +46,15 @@ public class Player : BaseCharacter
         this.cooldown = config.Cooldown;
     }
 
-    public override void Attack(float elapsedTime)
+    public override void OnTakenDamage(float dmgTaken)
+    {
+        GamePlayManager.Instance.OnPlayerTakenDamage(dmgTaken);
+    }
+    #endregion
+
+    // ==================================================
+
+    public void Attack(float elapsedTime)
     {
         this.cooldown -= elapsedTime;
 
@@ -62,22 +71,14 @@ public class Player : BaseCharacter
         }
     }
 
-    public override void OnTakenDamage(float dmgTaken)
+    public void OnPlayerMove(float elapsedTime, Vector3 movingVector)
     {
-        GamePlayManager.Instance.OnPlayerTakenDamage(dmgTaken);
-    }
-
-    // ==================================================
-
-    public void Move(float elapsedTime, Vector3 movingVector)
-    {
-        this.movingVector = movingVector;
+        this.SetMovingVector(movingVector);
         base.Move(elapsedTime);
     }
 
-    public void InvokeSpecialAtk(int type)
+    public void InvokeSpecialAtk(int bulletId)
     {
-        Vector3 barrelPos = this.tfGunBarrel.transform.position;
-        BulletManager.Instance.ShootBulletOfType(type, barrelPos);
+        BulletManager.Instance.ShootBulletOfType(bulletId, this.tfGunBarrel.position);
     }
 }

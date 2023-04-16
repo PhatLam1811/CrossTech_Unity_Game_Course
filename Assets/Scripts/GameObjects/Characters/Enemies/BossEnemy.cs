@@ -7,10 +7,12 @@ public class BossEnemy : BaseEnemy
 
     private bool isAttacking;
 
-    private float atkCooldown;
-    private float atkInterval;
+    private float cooldown;
+    private float interval;
 
     private int bulletId;
+
+    // ==================================================
 
     void Update()
     {
@@ -31,6 +33,9 @@ public class BossEnemy : BaseEnemy
         }
     }
 
+    // ==================================================
+
+    #region Overrides
     protected override void Init()
     {
         base.Init();
@@ -44,26 +49,8 @@ public class BossEnemy : BaseEnemy
         this.health = config.Health;
         this.speed = config.Speed;
         this.point = config.Point;
-        this.atkCooldown = config.Cooldown;
+        this.cooldown = config.Cooldown;
         this.bulletId = config.BulletId;
-    }
-
-    public override void Attack(float elapsedTime)
-    {
-        this.atkInterval -= elapsedTime;
-
-        if (this.atkInterval <= 0.0f)
-        {
-            Vector3 barrelPos = this.pfGunBarrel.transform.position;
-
-            // shoot a bullet every 1s
-            var obj = Instantiate(pfBullet, barrelPos, Quaternion.identity);
-
-            obj.GetComponent<BaseBullet>().SetMovingVector(new Vector3(x: 0f, y: -1f));
-
-            // reset cooldown
-            this.atkInterval = this.atkCooldown;
-        }
     }
 
     public override void OnDefeated()
@@ -71,8 +58,29 @@ public class BossEnemy : BaseEnemy
         base.OnDefeated();
         GamePlayManager.Instance.GameOver();
     }
+    #endregion
 
-    public void OnAppearing()
+    // ==================================================
+
+    private void Attack(float elapsedTime)
+    {
+        this.interval -= elapsedTime;
+
+        if (this.interval <= 0.0f)
+        {
+            Vector3 barrelPos = this.pfGunBarrel.transform.position;
+
+            // shoot a bullet after cooldown
+            var obj = Instantiate(pfBullet, barrelPos, Quaternion.identity);
+
+            obj.GetComponent<BaseBullet>().SetMovingVector(new Vector3(x: 0f, y: -1f));
+
+            // reset cooldown
+            this.interval = this.cooldown;
+        }
+    }
+
+    private void OnAppearing()
     {
         // switch to viewport's (main camera) normalized coordinate
         Vector3 viewportPos = GamePlayManager.Instance.ToViewportPos(this.transform.position);
@@ -80,12 +88,12 @@ public class BossEnemy : BaseEnemy
         if (viewportPos.y <= 0.8f)
         {
             this.isAttacking = true;
-            this.atkInterval = this.atkCooldown;
+            this.interval = this.cooldown;
             this.movingVector = Vector3.right;
         }
     }
 
-    public void OnAttacking(float elapsedTime)
+    private void OnAttacking(float elapsedTime)
     {
         // switch to viewport's (main camera) normalized coordinate
         Vector3 viewportPos = GamePlayManager.Instance.ToViewportPos(this.transform.position);

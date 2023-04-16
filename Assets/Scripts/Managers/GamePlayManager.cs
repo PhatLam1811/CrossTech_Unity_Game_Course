@@ -31,7 +31,7 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
         {
             float elapsedTime = Time.deltaTime;
 
-            this.player.Move(elapsedTime, movingVector);
+            this.player.OnPlayerMove(elapsedTime, movingVector);
         }
     }
 

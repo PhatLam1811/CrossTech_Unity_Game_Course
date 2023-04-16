@@ -118,9 +118,9 @@ public class EnemyManager : MonoSingleton<EnemyManager>
 
     // ==================================================
 
-    public void OnCollidedWithPlayer(BaseEnemy enemy, Player player, float dmgTaken)
+    public void OnCollidedWithPlayer(BaseEnemy enemy)
     {
-        enemy.OnCollidedWithPlayer(player, dmgTaken);
+        enemy.OnCollidedWithPlayer();
     }
 
     public void OnCollidedWithBullet(BaseEnemy enemy, BaseBullet bullet)
