@@ -26,7 +26,7 @@ MonoBehaviour:
     eplosionCountdown: 0
     explodedSpeed: 0
   - bulletId: 2
-    speed: 5
+    speed: 2
     damage: 5
     homingSpeed: 0
     eplosionCountdown: 1.5

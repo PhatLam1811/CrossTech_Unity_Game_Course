@@ -2,23 +2,24 @@ using UnityEngine;
 
 public class BuckshotBullet : BaseBullet
 {
-    private const float explodingSpeed = 3f;
-
-    private bool isExploded;
+    private float explodedSpeed;
     private float countdown;
+    private bool isExploded;
 
     [SerializeField] private GameObject pfBuckExplode;
 
-    // Update is called once per frame
     void Update()
     {
         if (!this.isGameOver)
         {
             float elapsedTime = Time.deltaTime;
 
-            if (!isExploded) countdown -= elapsedTime;
+            if (!this.isExploded)
+            {
+                this.countdown -= elapsedTime;
 
-            if (countdown <= 0f && !isExploded) Explode();
+                if (this.countdown <= 0f) this.Explode();
+            }
 
             base.Move(elapsedTime);
         }
@@ -28,9 +29,20 @@ public class BuckshotBullet : BaseBullet
     {
         base.Init();
 
-        speed = 1f;
-        isExploded = false;
-        countdown = 2f;
+        this.LoadConfig();
+        
+        this.isExploded = false;
+    }
+
+    protected override void LoadConfig()
+    {
+        BulletConfig config = BulletManager.Instance.GetBulletConfigOfType(GameDefine.BUCKSHOT_BULLET_ID);
+
+        this.SetSpeed(config.speed);
+        this.SetDamageInflict(config.damage);
+
+        this.countdown = config.eplosionCountdown;
+        this.explodedSpeed = config.explodedSpeed;
     }
 
     private void Explode()
@@ -47,8 +59,8 @@ public class BuckshotBullet : BaseBullet
         rightShot.GetComponent<ExplodedBuckshot>().SetMovingVector(rightShotVector);
 
         // exploded bullets' moving speed
-        leftShot.GetComponent<ExplodedBuckshot>().SetSpeed(explodingSpeed);
-        rightShot.GetComponent<ExplodedBuckshot>().SetSpeed(explodingSpeed);
+        leftShot.GetComponent<ExplodedBuckshot>().SetSpeed(this.explodedSpeed);
+        rightShot.GetComponent<ExplodedBuckshot>().SetSpeed(this.explodedSpeed);
 
         // exploded bullets' rotation
         float rotateAngle = Vector3.Angle(this.movingVector, leftShotVector);
@@ -56,7 +68,7 @@ public class BuckshotBullet : BaseBullet
         leftShot.GetComponent<ExplodedBuckshot>().transform.Rotate(Vector3.forward, rotateAngle);
         rightShot.GetComponent<ExplodedBuckshot>().transform.Rotate(Vector3.forward, -rotateAngle);
 
-        this.speed = explodingSpeed;
+        this.speed = this.explodedSpeed;
         this.isExploded = true;
     }
 }
