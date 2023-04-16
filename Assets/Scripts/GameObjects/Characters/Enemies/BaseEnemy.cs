@@ -29,11 +29,11 @@ public class BaseEnemy : BaseCharacter
     #region Overrides
     protected override void LoadConfig()
     {
-        EnemyConfig config = EnemyManager.Instance.GetConfigOfType(GameDefine.BASE_ENEMY_ID);
+        EnemyConfig config = EnemyManager.Instance.GetEnemyConfigOfType(GameDefine.BASE_ENEMY_ID);
 
-        this.SetHealth(config.Health);
-        this.SetPoint(config.Point);
-        this.SetSpeed(config.Speed);
+        this.SetHealth(config.health);
+        this.SetPoint(config.point);
+        this.SetSpeed(config.speed);
     }
 
     protected override void Move(float elapsedTime)

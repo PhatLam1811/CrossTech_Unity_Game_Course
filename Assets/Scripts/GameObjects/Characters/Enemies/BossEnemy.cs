@@ -44,13 +44,14 @@ public class BossEnemy : BaseEnemy
 
     protected override void LoadConfig()
     {
-        EnemyConfig config = EnemyManager.Instance.GetConfigOfType(GameDefine.BOSS_ENEMY_ID);
+        EnemyConfig config = EnemyManager.Instance.GetEnemyConfigOfType(GameDefine.BOSS_ENEMY_ID);
 
-        this.health = config.Health;
-        this.speed = config.Speed;
-        this.point = config.Point;
-        this.cooldown = config.Cooldown;
-        this.bulletId = config.BulletId;
+        this.SetHealth(config.health);
+        this.SetSpeed(config.speed);
+        this.SetPoint(config.point);
+        
+        this.cooldown = config.cooldown;
+        this.bulletId = config.bulletId;
     }
 
     public override void OnDefeated()
@@ -70,10 +71,12 @@ public class BossEnemy : BaseEnemy
         {
             Vector3 barrelPos = this.pfGunBarrel.transform.position;
 
-            // shoot a bullet after cooldown
-            var obj = Instantiate(pfBullet, barrelPos, Quaternion.identity);
+            BulletManager.Instance.ShootBulletOfType(bulletId, barrelPos);
 
-            obj.GetComponent<BaseBullet>().SetMovingVector(new Vector3(x: 0f, y: -1f));
+            // shoot a bullet after cooldown
+            //var obj = Instantiate(pfBullet, barrelPos, Quaternion.identity);
+
+            //obj.GetComponent<BaseBullet>().SetMovingVector(new Vector3(x: 0f, y: -1f));
 
             // reset cooldown
             this.interval = this.cooldown;

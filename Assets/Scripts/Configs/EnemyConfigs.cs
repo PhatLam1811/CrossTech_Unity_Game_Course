@@ -25,28 +25,19 @@ public class EnemyConfigs : ScriptableObject
     }
     #endregion
 
-    [SerializeField] private List<EnemyConfig> enemies;
-
-    public List<EnemyConfig> Enemies { get => this.enemies; }
+    public List<EnemyConfig> enemyConfigs;
 }
 
 [System.Serializable]
 public class EnemyConfig
 {
-    [SerializeField] private int typeId;
+    public int enemyId;
 
-    [SerializeField] private float health;
-    [SerializeField] private float speed;
-    [SerializeField] private int point;
+    public float health;
+    public float speed;
+    public int point;
 
     // configurations for shootable enemies aka boss
-    [SerializeField] private float cooldown;
-    [SerializeField] private int bulletId;
-
-    public int TypeId { get => this.typeId;}
-    public float Health { get => this.health; }
-    public float Speed { get => this.speed; }
-    public int Point { get => this.point; }
-    public float Cooldown { get => this.cooldown; }
-    public int BulletId { get => this.bulletId; }
+    public float cooldown;
+    public int bulletId;
 }

@@ -8,6 +8,7 @@ public static class GameDefine
     public const string START_DIALOG_PATH = "UI Elements/Start Dialog";
     public const string ENEMY_CONFIGS_FILE_PATH = "Configs/EnemyConfigs";
     public const string PLAYER_CONFIG_FILE_PATH = "Configs/PlayerConfig";
+    public const string BULLET_CONFIG_FILE_PATH = "Configs/BulletConfigs";
 
     // bullet
     public const int DEFAULT_BULLET_ID = 0;

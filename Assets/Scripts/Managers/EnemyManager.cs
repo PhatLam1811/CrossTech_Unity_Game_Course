@@ -53,9 +53,9 @@ public class EnemyManager : MonoSingleton<EnemyManager>
         this.isGameOver = false;
     }
 
-    public EnemyConfig GetConfigOfType(int enemyTypeId)
+    public EnemyConfig GetEnemyConfigOfType(int enemyId)
     {
-        return GameManager.Instance.GetEnemyConfigOfType(enemyTypeId);
+        return GameManager.Instance.GetEnemyConfigOfType(enemyId);
     }
 
     // ==================================================

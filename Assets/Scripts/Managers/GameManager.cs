@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    [SerializeField] private Transform dialogPosition;
+    [SerializeField] private Transform canvasPos;
 
     private Dictionary<int, EnemyConfig> enemyConfigs;
+    private Dictionary<int, BulletConfig> bulletConfigs;
 
     void Start()
     {
@@ -14,6 +15,8 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void OpenApp()
     {
+        this.LoadEnemyConfigs();
+        this.LoadBulletConfigs();
         this.OnShowDialog<StartDialog>(GameDefine.START_DIALOG_PATH);
     }
 
@@ -21,7 +24,6 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void StartGame()
     {
-        this.LoadEnemyConfigs();
         GameDataManager.Instance.StartGame();
     }
 
@@ -41,29 +43,63 @@ public class GameManager : MonoSingleton<GameManager>
     {
         this.enemyConfigs = new Dictionary<int, EnemyConfig>();
 
-        if (EnemyConfigs.Instance.Enemies != null)
+        if (EnemyConfigs.Instance.enemyConfigs != null)
         {
-            foreach (EnemyConfig config in EnemyConfigs.Instance.Enemies)
+            foreach (EnemyConfig config in EnemyConfigs.Instance.enemyConfigs)
             {
-                this.enemyConfigs[config.TypeId] = config;
+                this.enemyConfigs[config.enemyId] = config;
             }
+
+            Debug.Log("Successfully loadded enemy configs!!!");
         }
         else
         {
             // this shouldn't happen
-            Debug.LogError("Null enemy configs!!!");
+            Debug.LogError("Null enemy configs dictionary!!!");
         }
     }
 
-    public EnemyConfig GetEnemyConfigOfType(int enemyTypeId)
+    private void LoadBulletConfigs()
     {
-        if (this.enemyConfigs[enemyTypeId] != null)
+        this.bulletConfigs = new Dictionary<int, BulletConfig>();
+
+        if (BulletConfigs.Instance.bulletConfigs != null)
         {
-            return this.enemyConfigs[enemyTypeId];
+            foreach (BulletConfig config in BulletConfigs.Instance.bulletConfigs)
+            {
+                this.bulletConfigs[config.bulletId] = config;
+            }
+
+            Debug.Log("Successfully loadded bullet configs!!!");
         }
         else
         {
-            Debug.LogError("Unknown enemy type!!!! - type : " + enemyTypeId); return null;
+            // this shouldn't happen
+            Debug.LogError("Null bullet configs dictionary!!!");
+        }
+    }
+
+    public EnemyConfig GetEnemyConfigOfType(int enemyId)
+    {
+        if (this.enemyConfigs[enemyId] != null)
+        {
+            return this.enemyConfigs[enemyId];
+        }
+        else
+        {
+            Debug.LogError("Unknown enemy type!!!! - type : " + enemyId); return null;
+        }
+    }
+
+    public BulletConfig GetBulletConfigOfType(int bulletId)
+    {
+        if (this.bulletConfigs[bulletId] != null)
+        {
+            return this.bulletConfigs[bulletId];
+        }
+        else
+        {
+            Debug.LogError("Unknown enemy type!!!! - type : " + bulletId); return null;
         }
     }
 
@@ -75,7 +111,7 @@ public class GameManager : MonoSingleton<GameManager>
 
         if (dialogPrefab != null)
         {
-            T dialogComponent = (Instantiate(dialogPrefab, dialogPosition)).GetComponent<T>();
+            T dialogComponent = (Instantiate(dialogPrefab, this.canvasPos)).GetComponent<T>();
 
             if (dialogComponent != null)
             {

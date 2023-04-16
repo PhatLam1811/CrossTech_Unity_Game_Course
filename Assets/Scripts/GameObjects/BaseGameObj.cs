@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class BaseGameObj : MonoBehaviour
@@ -56,12 +57,12 @@ public class BaseGameObj : MonoBehaviour
         this.isGameOver = false;
     }
 
+    protected virtual void LoadConfig() { }
+
     protected virtual void Move(float elapsedTime)
     {
         this.transform.position += this.movingVector * elapsedTime * this.speed;
     }
-
-    protected virtual void LoadConfig() { }
     #endregion
 
     // ==================================================

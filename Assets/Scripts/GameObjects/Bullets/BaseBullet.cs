@@ -17,9 +17,17 @@ public class BaseBullet : BaseGameObj
     {
         base.Init();
 
+        this.LoadConfig();
+
         this.SetMovingVector(Vector3.up);
-        this.SetSpeed(10f);
-        this.SetDamageInflict(1f);
+    }
+
+    protected override void LoadConfig()
+    {
+        BulletConfig config = BulletManager.Instance.GetBulletConfigOfType(GameDefine.DEFAULT_BULLET_ID);
+
+        this.SetSpeed(config.speed);
+        this.SetDamageInflict(config.damage);
     }
 
     protected override void Move(float elapsedTime)

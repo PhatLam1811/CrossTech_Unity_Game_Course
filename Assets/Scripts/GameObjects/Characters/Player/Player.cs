@@ -43,16 +43,7 @@ public class Player : BaseCharacter
     protected override void Init()
     {
         base.Init();
-        this.LoadConfig();
-    }
-
-    protected override void LoadConfig()
-    {
-        PlayerConfig config = PlayerConfig.Instance;
-
-        this.SetSpeed(config.Speed);
-
-        this.cooldown = config.Cooldown;
+        this.LoadPlayerConfig();
     }
 
     public override void OnTakenDamage(float dmgTaken)
@@ -62,6 +53,15 @@ public class Player : BaseCharacter
     #endregion
 
     // ==================================================
+
+    private void LoadPlayerConfig()
+    {
+        PlayerConfig config = PlayerConfig.Instance;
+
+        this.SetSpeed(config.Speed);
+
+        this.cooldown = config.Cooldown;
+    }
 
     public void Attack(float elapsedTime)
     {

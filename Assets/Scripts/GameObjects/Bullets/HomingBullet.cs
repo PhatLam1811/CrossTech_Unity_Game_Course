@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class HomingBullet : BaseBullet
 {
-    private const float homingSpeed = 3f;
-
     private BaseEnemy target;
+    private float homingSpeed;
 
-    // Update is called once per frame
+    // ==================================================
+
     void Update()
     {
         if (!this.isGameOver)
@@ -19,12 +19,30 @@ public class HomingBullet : BaseBullet
         }
     }
 
+    // ==================================================
+
+    #region Overrides
     protected override void Init()
     {
         base.Init();
 
+        this.LoadConfig();
+
         this.target = null;
     }
+
+    protected override void LoadConfig()
+    {
+        BulletConfig config = BulletManager.Instance.GetBulletConfigOfType(GameDefine.HOMING_BULLET_ID);
+
+        this.SetSpeed(config.speed);
+        this.SetDamageInflict(config.damage);
+
+        this.homingSpeed = config.homingSpeed;
+    }
+    #endregion
+
+    // ==================================================
 
     public void SetTarget(BaseEnemy target)
     {

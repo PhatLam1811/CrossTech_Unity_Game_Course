@@ -28,15 +28,20 @@ public class BulletManager : MonoSingleton<BulletManager>
         this.isGameOver = true;
     }
 
-    public void ShootBulletOfType(int type, Vector3 pos)
+    public BulletConfig GetBulletConfigOfType(int bulletId)
+    {
+        return GameManager.Instance.GetBulletConfigOfType(bulletId);
+    }
+
+    public void ShootBulletOfType(int bulletId, Vector3 pos)
     {
         if (!this.isGameOver)
         {
-            Instantiate(pfBullets[type], pos, Quaternion.identity);
+            Instantiate(pfBullets[bulletId], pos, Quaternion.identity);
         }
     }
 
-    internal void OnPlayerCollidedWithBullet(EnemyBullet enemyBullet)
+    public void OnPlayerCollidedWithBullet(EnemyBullet enemyBullet)
     {
         enemyBullet.OnCollidedWithPlayer();
     }

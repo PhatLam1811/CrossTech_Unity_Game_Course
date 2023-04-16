@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a24fa328aa7464e8fef21724d9069f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogPosition: {fileID: 1508767051}
+  canvasPos: {fileID: 1508767051}
 --- !u!4 &331426507
 Transform:
   m_ObjectHideFlags: 0
