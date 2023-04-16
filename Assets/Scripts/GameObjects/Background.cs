@@ -20,12 +20,13 @@ public class Background : BaseGameObj
     {
         base.Init();
 
-        this.speed = 1.5f;
-        this.movingVector = Vector3.down;
+        this.SetMovingVector(Vector3.down);
+        this.SetSpeed(1.5f);
+
         this.reloadPos = this.tfBuffer.position;
     }
 
-    public override void Move(float elapsedTime)
+    protected override void Move(float elapsedTime)
     {
         // switch to viewport's (main camera) normalized coordinate
         Vector3 viewportPos = GamePlayManager.Instance.ToViewportPos(this.transform.position);

@@ -6,7 +6,7 @@ public class BaseBullet : BaseGameObj
     {
         if (collision.TryGetComponent(out BaseEnemy enemy))
         {
-            EnemyManager.Instance.OnCollidedWithBullet(enemy, this, this.damage);
+            EnemyManager.Instance.OnCollidedWithBullet(enemy, this);
 
             // bullet disapear after hitting an enemy
             this.DestroySelf();
@@ -17,18 +17,21 @@ public class BaseBullet : BaseGameObj
     {
         base.Init();
 
-        this.damage = 1;
-        this.speed = 10f;
-        this.movingVector = Vector3.up;
+        this.SetMovingVector(Vector3.up);
+        this.SetSpeed(10f);
+        this.SetDamageInflict(1f);
     }
 
-    public override void Move(float elapsedTime)
+    protected override void Move(float elapsedTime)
     {
         // switch to viewport's (main camera) normalized coordinate
         Vector3 viewportPos = GamePlayManager.Instance.ToViewportPos(this.transform.position);
 
-        if (viewportPos.y >= 0f && viewportPos.y <= 1f &&   // 0f: viewport's bottom edge - 1f: viewport's top edge
-            viewportPos.x >= 0f && viewportPos.x <= 1f)     // 0f: viewport's left edge - 1f: viewport's right edge
+        const float minRange = 0f;
+        const float maxRange = 1f;
+
+        if (viewportPos.y >= minRange && viewportPos.y <= maxRange &&   // 0f: viewport's bottom edge - 1f: viewport's top edge
+            viewportPos.x >= minRange && viewportPos.x <= maxRange)     // 0f: viewport's left edge - 1f: viewport's right edge
         {
             base.Move(elapsedTime);
         }

@@ -4,8 +4,9 @@ public class Player : BaseCharacter
 {
     [SerializeField] private Transform tfGunBarrel;
 
-    private float atkCooldown;
-    private float atkInterval;
+    private float cooldown;
+
+    // ==================================================
 
     void Update()
     {
@@ -32,18 +33,24 @@ public class Player : BaseCharacter
     protected override void Init()
     {
         base.Init();
-
         this.LoadConfig();
+    }
 
-        this.atkInterval = this.atkCooldown;
+    protected override void LoadConfig()
+    {
+        PlayerConfig config = PlayerConfig.Instance;
+
+        this.SetSpeed(config.Speed);
+
+        this.cooldown = config.Cooldown;
     }
 
     public override void Attack(float elapsedTime)
     {
-        this.atkInterval -= elapsedTime;
+        this.cooldown -= elapsedTime;
 
         // shoot a bullet after cooldown
-        if (this.atkInterval <= 0.0f)
+        if (this.cooldown <= 0.0f)
         {
             Vector3 barrelPos = this.tfGunBarrel.position;
             int currentBullet = GamePlayManager.Instance.GetPlayerCurrentBullet();
@@ -51,7 +58,7 @@ public class Player : BaseCharacter
             BulletManager.Instance.ShootBulletOfType(currentBullet, barrelPos);
 
             // reset cooldown
-            this.atkInterval = this.atkCooldown;
+            this.cooldown = PlayerConfig.Instance.Cooldown;
         }
     }
 
@@ -61,14 +68,6 @@ public class Player : BaseCharacter
     }
 
     // ==================================================
-
-    protected override void LoadConfig()
-    {
-        PlayerConfig config = PlayerConfig.Instance;
-
-        this.speed = config.Speed;
-        this.atkCooldown = config.Cooldown;
-    }
 
     public void Move(float elapsedTime, Vector3 movingVector)
     {

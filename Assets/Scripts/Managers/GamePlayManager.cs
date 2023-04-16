@@ -16,12 +16,14 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
 
     private bool isGameOver;
 
-    protected void Start()
+    // ==================================================
+
+    void Start()
     {
         this.isGameOver = true;
     }
 
-    protected void Update()
+    void Update()
     {
         this.ProcessInput(out Vector3 movingVector);
 
@@ -89,6 +91,8 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
         this.GameOver();
     }
 
+    public Player GetPlayer() { return this.player; }
+
     public int GetPlayerCurrentBullet()
     {
         return PlayerData.Instance.currentBulletId;
@@ -103,9 +107,9 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
 
     // ==================================================
 
-    public void OnPlayerCollidedWithBullet(Player player, EnemyBullet enemyBullet, float dmgTaken)
+    public void OnPlayerCollidedWithBullet(Player player, EnemyBullet enemyBullet)
     {
-        player.OnCollidedWithBullet(enemyBullet, dmgTaken);
+        player.OnCollidedWithBullet(enemyBullet);
     }
 
     public void OnPlayerTakenDamage(float dmgTaken)

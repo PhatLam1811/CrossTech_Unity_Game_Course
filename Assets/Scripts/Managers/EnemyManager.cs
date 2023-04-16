@@ -123,9 +123,9 @@ public class EnemyManager : MonoSingleton<EnemyManager>
         enemy.OnCollidedWithPlayer(player, dmgTaken);
     }
 
-    public void OnCollidedWithBullet(BaseEnemy enemy, BaseBullet bullet, float dmgTaken)
+    public void OnCollidedWithBullet(BaseEnemy enemy, BaseBullet bullet)
     {
-        enemy.OnCollidedWithBullet(bullet, dmgTaken);
+        enemy.OnCollidedWithBullet(bullet);
     }
 
     public void GameOver()

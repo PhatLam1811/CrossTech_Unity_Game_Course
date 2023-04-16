@@ -40,6 +40,7 @@ public class BaseGameObj : MonoBehaviour
 
     // ==================================================
 
+    #region Virtuals
     protected virtual void Init()
     {
         this.SetMovingVector(Vector3.zero);
@@ -55,12 +56,17 @@ public class BaseGameObj : MonoBehaviour
         this.isGameOver = false;
     }
 
-    public virtual void Move(float elapsedTime)
+    protected virtual void Move(float elapsedTime)
     {
         this.transform.position += this.movingVector * elapsedTime * this.speed;
     }
 
-    protected virtual void DestroySelf()
+    protected virtual void LoadConfig() { }
+    #endregion
+
+    // ==================================================
+
+    protected void DestroySelf()
     {
         GamePlayManager.Instance.onGameOverCallback -= this.GameOver;
         GamePlayManager.Instance.onGameReplayCallback -= this.OnReplayGame;
@@ -71,12 +77,12 @@ public class BaseGameObj : MonoBehaviour
         }
     }
 
-    public void GameOver()
+    protected void GameOver()
     {
         this.isGameOver = true;
     }
 
-    public void OnReplayGame()
+    protected void OnReplayGame()
     {
         this.DestroySelf();
     }

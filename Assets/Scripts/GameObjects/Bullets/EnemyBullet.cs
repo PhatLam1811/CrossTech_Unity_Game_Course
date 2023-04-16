@@ -6,7 +6,7 @@ public class EnemyBullet : BaseBullet
     {
         if (collision.TryGetComponent(out Player player))
         {
-            GamePlayManager.Instance.OnPlayerCollidedWithBullet(player, this, this.damage);
+            GamePlayManager.Instance.OnPlayerCollidedWithBullet(player, this);
 
             this.OnCollidedWithPlayer(player);
         }
