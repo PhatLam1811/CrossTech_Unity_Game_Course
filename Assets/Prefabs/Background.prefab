@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f4c7c9190939f43b1792b1caef7524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bufferTransform: {fileID: 7507254774877212038}
+  tfBuffer: {fileID: 7507254774877212038}
 --- !u!1 &6843383186754123459
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,4 +228,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f4c7c9190939f43b1792b1caef7524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bufferTransform: {fileID: 7507254774877212038}
+  tfBuffer: {fileID: 7507254774877212038}

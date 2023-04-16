@@ -26,8 +26,7 @@ public class BaseEnemy : BaseCharacter
     public override void Move(float elapsedTime)
     {
         // switch to viewport's (main camera) normalized coordinate
-        Vector3 worldPos = transform.position;
-        Vector3 viewportPos = viewport.WorldToViewportPoint(worldPos);
+        Vector3 viewportPos = GamePlayManager.Instance.ToViewportPos(this.transform.position);
 
         if (viewportPos.y < 0f) // 0f: viewport's bottom edge
         {

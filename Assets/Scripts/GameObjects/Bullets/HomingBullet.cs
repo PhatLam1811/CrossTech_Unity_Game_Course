@@ -7,12 +7,15 @@ public class HomingBullet : BaseBullet
     private BaseEnemy target;
 
     // Update is called once per frame
-    protected override void Update()
+    void Update()
     {
         if (!this.isGameOver)
         {
-            base.Update();
-            if (target) Homing();
+            float elapsedTime = Time.deltaTime;
+
+            this.Move(elapsedTime);
+
+            if (this.target) Homing();
         }
     }
 
@@ -20,7 +23,7 @@ public class HomingBullet : BaseBullet
     {
         base.Init();
 
-        target = null;
+        this.target = null;
     }
 
     public void SetTarget(BaseEnemy target)

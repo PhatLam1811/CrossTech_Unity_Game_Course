@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class Background : BaseGameObj
 {
-    [SerializeField] private Transform bufferTransform;
+    [SerializeField] private Transform tfBuffer;
 
-    private Vector3 reloadPosition;
+    private Vector3 reloadPos;
 
     private void Awake()
     {
-        if (this.transform == this.bufferTransform)
+        if (this.transform == this.tfBuffer)
         {
             // detach buffer to stop it from chasing its parent
             // the buffer will move in sync with the background (speed = 1.5f)
@@ -22,16 +22,15 @@ public class Background : BaseGameObj
 
         this.speed = 1.5f;
         this.movingVector = Vector3.down;
-        this.reloadPosition = this.bufferTransform.position;
+        this.reloadPos = this.tfBuffer.position;
     }
 
     public override void Move(float elapsedTime)
     {
         // switch to viewport's (main camera) normalized coordinate
-        Vector3 worldCoord = this.transform.position;
-        Vector3 viewportCoord = this.viewport.WorldToViewportPoint(worldCoord);
+        Vector3 viewportPos = GamePlayManager.Instance.ToViewportPos(this.transform.position);
 
-        if (viewportCoord.y < -0.5f)
+        if (viewportPos.y < -0.5f)
         {
             // reload if out of camera view
             this.Reload();
@@ -45,6 +44,6 @@ public class Background : BaseGameObj
 
     private void Reload()
     {
-        this.transform.position = this.reloadPosition;
+        this.transform.position = this.reloadPos;
     }
 }

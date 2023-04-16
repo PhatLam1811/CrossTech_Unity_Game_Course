@@ -12,7 +12,7 @@ public class BossEnemy : BaseEnemy
 
     private int bulletId;
 
-    protected override void Update()
+    void Update()
     {
         if (!this.isGameOver)
         {
@@ -75,8 +75,7 @@ public class BossEnemy : BaseEnemy
     public void OnAppearing()
     {
         // switch to viewport's (main camera) normalized coordinate
-        Vector3 worldPos = this.transform.position;
-        Vector3 viewportPos = this.viewport.WorldToViewportPoint(worldPos);
+        Vector3 viewportPos = GamePlayManager.Instance.ToViewportPos(this.transform.position);
 
         if (viewportPos.y <= 0.8f)
         {
@@ -89,8 +88,7 @@ public class BossEnemy : BaseEnemy
     public void OnAttacking(float elapsedTime)
     {
         // switch to viewport's (main camera) normalized coordinate
-        Vector3 worldPos = this.transform.position;
-        Vector3 viewportPos = this.viewport.WorldToViewportPoint(worldPos);
+        Vector3 viewportPos = GamePlayManager.Instance.ToViewportPos(this.transform.position);
 
         if (viewportPos.x > 0.9f) this.movingVector = new Vector3(x: -1f, y: 0f);
         if (viewportPos.x < 0f) this.movingVector = new Vector3(x: 1f, y: 0f);

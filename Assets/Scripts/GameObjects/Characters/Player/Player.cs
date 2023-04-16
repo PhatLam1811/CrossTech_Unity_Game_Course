@@ -7,8 +7,7 @@ public class Player : BaseCharacter
     private float atkCooldown;
     private float atkInterval;
 
-    // Update is called once per frame
-    protected override void Update()
+    void Update()
     {
         if (!this.isGameOver)
         {

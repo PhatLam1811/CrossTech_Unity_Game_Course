@@ -21,4 +21,6 @@ public static class GameDefine
 
     // others
     public const int DEFAULT_AUTO_SAVE_INTERVAL = 30;   // auto save every 30 seconds
+    public const float DEFAULT_GAME_OBJECT_SPEED = 0f;
+    public const float DEFAULT_GAME_OBJECT_DAMAGE = 0f;
 }

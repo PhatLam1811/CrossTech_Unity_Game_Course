@@ -10,7 +10,7 @@ public class BuckshotBullet : BaseBullet
     [SerializeField] private GameObject pfBuckExplode;
 
     // Update is called once per frame
-    protected override void Update()
+    void Update()
     {
         if (!this.isGameOver)
         {

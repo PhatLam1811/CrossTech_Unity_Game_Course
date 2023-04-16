@@ -25,8 +25,7 @@ public class BaseBullet : BaseGameObj
     public override void Move(float elapsedTime)
     {
         // switch to viewport's (main camera) normalized coordinate
-        Vector3 worldPos = this.transform.position;
-        Vector3 viewportPos = this.viewport.WorldToViewportPoint(worldPos);
+        Vector3 viewportPos = GamePlayManager.Instance.ToViewportPos(this.transform.position);
 
         if (viewportPos.y >= 0f && viewportPos.y <= 1f &&   // 0f: viewport's bottom edge - 1f: viewport's top edge
             viewportPos.x >= 0f && viewportPos.x <= 1f)     // 0f: viewport's left edge - 1f: viewport's right edge

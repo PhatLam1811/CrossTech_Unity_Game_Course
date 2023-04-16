@@ -5,23 +5,23 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
     [SerializeField] private GameObject pfBackground;
     [SerializeField] private GameObject pfPlayer;
 
-    private Player player;
-    private bool isGameOver;
-
     public delegate void GameOverCallback();
     public delegate void ReplayGameCallback();
 
     public event GameOverCallback onGameOverCallback;
     public event ReplayGameCallback onGameReplayCallback;
 
-    // Start is called before the first frame update
-    void Start()
+    private Camera viewport;
+    private Player player;
+
+    private bool isGameOver;
+
+    protected void Start()
     {
         this.isGameOver = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         this.ProcessInput(out Vector3 movingVector);
 
@@ -37,6 +37,9 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
     {
         // background
         Instantiate(this.pfBackground, Vector3.zero, Quaternion.identity);
+
+        // viewport
+        this.viewport = Camera.main;
 
         // player
         this.player = Instantiate(this.pfPlayer, Vector3.zero, Quaternion.identity).GetComponent<Player>();
@@ -89,6 +92,13 @@ public class GamePlayManager : MonoSingleton<GamePlayManager>
     public int GetPlayerCurrentBullet()
     {
         return PlayerData.Instance.currentBulletId;
+    }
+
+    // ==================================================
+
+    public Vector3 ToViewportPos(Vector3 worldPos)
+    {
+        return this.viewport.WorldToViewportPoint(worldPos);
     }
 
     // ==================================================
